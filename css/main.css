@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #707070;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2d2d2d;
+}
+
+/* Handle on hover */
+::-moz-selection {
+  background: #831005;
+}
+
+::selection {
+  background: #2d2d2d;
+}
+
+main {
+  font-family: "Poppins", sans-serif;
+  min-height: 1100px;
+  display: block;
+}
+
+nav ul {
+  display: inline-block;
+  position: fixed;
+  right: 50px;
+  top: 50px;
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+  z-index: 100;
+}
+nav li {
+  color: #707070;
+  cursor: pointer;
+}
+nav :hover {
+  color: black;
+}
+
+header {
+  width: 100%;
+  background-color: burlywood;
+  height: 100vh;
+}
+header h1 {
+  font-family: "Roboto", sans-serif;
+  border: 1px solid black;
+  display: inline-block;
+  position: absolute;
+  top: 60vh;
+  left: 40%;
+  transform: translateX(-50%);
+  font-size: 5em;
+  color: #222222;
+}
+header h2 {
+  border: 1px solid black;
+  display: inline-block;
+  position: absolute;
+  top: 86vh;
+  left: 40%;
+  font-family: "Roboto", sans-serif;
+}
+
+#projects {
+  position: relative;
+  width: 100%;
+  min-height: 1900px;
+}
+
+.four p, .three p, .one p {
+  font-size: 14px;
+  color: #707070;
+}
+
+.projects-container {
+  position: relative;
+  width: 1000px;
+  height: 1900px;
+  margin: 0 auto;
+  margin-right: 150px;
+}
+.projects-container h2 {
+  color: #2d2d2d;
+  white-space: nowrap;
+}
+.projects-container button {
+  white-space: nowrap;
+  background: none;
+  border: none;
+  color: #707070;
+  font-size: 14px;
+  cursor: pointer;
+  height: 20px;
+}
+.projects-container button:hover {
+  color: #2d2d2d;
+}
+
+.one {
+  position: relative;
+  display: inline-block;
+  width: 400px;
+  color: #707070;
+  margin-left: 90px;
+}
+.one h2 {
+  color: #2d2d2d;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.one p {
+  text-align: start;
+  width: 69%;
+  margin-top: 10px;
+}
+.one img {
+  width: 400px;
+}
+.one button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+.one hr {
+  width: 400px;
+  position: absolute;
+  left: -300px;
+}
+
+.two {
+  position: absolute;
+  display: inline-block;
+  width: 300px;
+  color: #707070;
+  border: 1px solid #707070;
+  width: 250px;
+  right: 0;
+  margin-top: 200px;
+  transition: 0.5s;
+}
+.two img {
+  width: 100%;
+}
+.two p {
+  font-size: 12px;
+  text-align: start;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+.two button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.two:hover {
+  background-color: red;
+}
+
+.three {
+  margin-top: 100px;
+  display: flex;
+  width: 780px;
+  right: 0px;
+  position: absolute;
+  color: #707070;
+}
+.three img {
+  width: 500px;
+  right: 0px;
+  position: absolute;
+}
+.three p {
+  text-align: start;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+.three button {
+  position: absolute;
+  top: 200px;
+  left: 130px;
+  color: #707070;
+  font-size: 14px;
+  cursor: pointer;
+}
+.three p {
+  width: 100%;
+  text-align: end;
+}
+.three div {
+  height: 400px;
+  width: 220px;
+  border: 1px solid #707070;
+}
+
+.four {
+  display: flex;
+  width: 900px;
+  position: absolute;
+  color: #707070;
+  top: 1300px;
+  transition: 0.5s;
+}
+.four p {
+  margin-right: 15px;
+}
+.four button {
+  top: 50px;
+  position: relative;
+  right: 80px;
+}
+.four h2 {
+  margin-left: 20px;
+}
+.four img {
+  height: 250px;
+}
+
+hr {
+  color: red;
+  width: 50px;
+  top: 50px;
+  position: absolute;
+}
+
+/*# sourceMappingURL=main.css.map */
