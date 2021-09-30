@@ -1,318 +1,322 @@
 @import "_vars";
-
 * {
-    margin: 0;
-    padding: 0;    
-  }
-
-  *:focus {
-    outline: 0 !important;
+	margin: 0;
+	padding: 0;
 }
-html
-{
-    scroll-behavior: smooth;
+
+*:focus {
+	outline: 0 !important;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+	width: 10px;
 }
+
 
 /* Track */
-::-webkit-scrollbar-track {
-    background:  $lightGray ;
 
+::-webkit-scrollbar-track {
+	background: $lightGray;
 }
+
 
 /* Handle */
-::-webkit-scrollbar-thumb {
-    background: $darkGray;
 
+::-webkit-scrollbar-thumb {
+	background: $darkGray;
 }
 
+
 /* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
-    // background: #1b0d01;
-    
+	// background: #1b0d01;
 }
 
 ::-moz-selection {
-    background: #831005;
+	background: #831005;
 }
 
 ::selection {
-    background: $darkGray;
+	background: $darkGray;
 }
 
-main{
-    font-family: $primaryText;
-    min-height: 1100px;
-    display: block;
+main {
+	font-family: $primaryText;
+	min-height: 1100px;
+	display: block;
 }
 
-nav{
-    ul{
-    //   border: $border;
+nav {
+	ul {
+		//   border: $border;
+		display: inline-block;
+		position: fixed;
+		right: 50px;
+		top: 50px;
+		font-family: $secondaryText;
+		list-style: none;
+		z-index: 100;
+	}
 
-      display: inline-block;
-      position: fixed;
-      right: 50px;
-      top: 50px;
-      font-family: $secondaryText;
-      list-style: none;
-      z-index: 100;
-     
-      
-    }
-    li{
-        color: $lightGray;
-        cursor: pointer;
-    }
-    :hover
-    {
-        color: black;
-    }
-   
+	li {
+
+        // color: text($bg);
+
+		color: $lightGray;
+		cursor: pointer;
+	}
+	 :hover {
+		color: black;
+	}
 }
 
-header
-{
-    width: 100%;
-    background-color: burlywood;
-    height: 100vh;
-    h1
-    {
-        font-family: $secondaryText;
-        border: $border;
-        display: inline-block;
-        position: absolute;
-        top: 60vh;
-        left: 40%;
-        transform: translateX(-50%);
-        font-size: 5em;
-        color: #222222;
-    }
-    h2 
-    {
-        border: $border;
-        display: inline-block;
-        position: absolute;
-        top: 86vh;
-        left: 40%;
-        font-family: $secondaryText;
-    }
+header {
+	width: 100%;
+	background-color: burlywood;
+	height: 100vh;
+	h1 {
+		font-family: $secondaryText;
+		border: $border;
+		display: inline-block;
+		position: absolute;
+		top: 60vh;
+		left: 40%;
+		transform: translateX(-50%);
+		font-size: 5em;
+		color: #222222;
+	}
+	h2 {
+		border: $border;
+		display: inline-block;
+		position: absolute;
+		top: 86vh;
+		left: 40%;
+	}
 }
 
-#projects
-{
-position: relative;
-width:100%;
-min-height: 1900px;
+#projects {
+	position: relative;
+	width: 100%;
+	height: auto;
 }
 
-%project-descr
-{
+%project-descr {
+	font-size: 14px;
+	color: $lightGray;
+}
+
+.projects-container {
+	position: relative;
+	width: 1000px;
+	height: 1900px;
+	margin: 0 auto;
+	margin-right: 150px;
+	h2 {
+		color: $darkGray;
+		white-space: nowrap;
+	}
+	button {
+		white-space: nowrap;
+		background: none;
+		border: none;
+		color: $lightGray;
+		font-size: 14px;
+		cursor: pointer;
+		height: 20px;
+	}
+	button:hover {
+		color: $darkGray;
+	}
+}
+
+.one {
+	position: relative;
+	display: inline-block;
+	width: 400px;
+	color: $lightGray;
+	margin-left: 90px;
+	h2 {
+		font-size: 20px;
+		margin-top: 20px;
+	}
+	p {
+		@extend %project-descr;
+		text-align: start;
+		width: 69%;
+		margin-top: 10px;
+		// border: $border;
+	}
+	img {
+		width: 400px;
+	}
+	button {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+	hr {
+		width: 400px;
+		position: absolute;
+		left: -300px;
+	}
+}
+
+.two {
+	position: absolute;
+	display: inline-block;
+	width: 300px;
+	color: $lightGray;
+	border: 1px solid $lightGray;
+	width: 250px;
+	right: 0;
+	margin-top: 200px;
+	transition: .5s;
+	img {
+		width: 100%;
+	}
+	p {
+		font-size: 12px;
+		text-align: start;
+		margin-top: 10px;
+		margin-bottom: 50px;
+	}
+	button {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+}
+
+.two:hover {
+	background-color: red;
+}
+
+.three {
+	margin-top: 100px;
+	display: flex;
+	width: 780px;
+	right: 0px;
+	position: absolute;
+	color: $lightGray;
+	img {
+		width: 500px;
+		right: 0px;
+		position: absolute;
+	}
+	p {
+		@extend %project-descr;
+		text-align: start;
+		margin-top: 10px;
+		margin-bottom: 50px;
+	}
+	button {
+		position: absolute;
+		top: 200px;
+		left: 130px;
+	}
+	p {
+		width: 100%;
+		text-align: end;
+	}
+	div {
+		height: 400px;
+		width: 220px;
+		border: 1px solid $lightGray
+	}
+}
+
+.four {
+	display: flex;
+	min-width: 900px;
+	position: absolute;
+	color: $lightGray;
+	// right: 0;
+	top: 1300px;
+	transition: .5s;
+	p {
+		@extend %project-descr;
+		margin-right: 15px;
+	}
+	button {
+		top: 50px;
+		position: relative;
+		right: 80px;
+	}
+	h2 {
+		margin-left: 20px;
+	}
+	img {
+		height: 350px
+	}
+}
+
+#hr-Snip {
+	color: green;
+	width: 180px;
+	right: 0;
+	position: absolute;
+	margin-top: -200px;
+	border-top: 3px solid red;
+}
+
+#about-me {
+	background-color: rgb(141, 141, 141);
     font-size: 14px;
-    color: $lightGray;
-}
 
-.projects-container
-{
-    position: relative;
-    width: 1000px;
-    height: 1900px;
-    margin: 0 auto;
-    margin-right: 150px;
-    h2 
+    .about-me-container
     {
-        color: $darkGray;
-      
-        white-space: nowrap;
-    }
-    button 
-    {white-space: nowrap;
-        background: none;
-        border: none;
-        color: $lightGray;
-        font-size: 14px;
-        cursor: pointer;
-        height: 20px;
-
-    }
-    button:hover{
-        color: $darkGray;
-    }
-}
-
-.one
-{
-    position: relative;
-    display: inline-block;
-    width: 400px;
-    color: $lightGray;
-    margin-left: 90px;
-    
-    h2 
-    {
-        color: $darkGray;
-        font-size: 20px;
-        margin-top: 20px;
-    }
-
-    p {
-        @extend %project-descr;
-        text-align: start;
-        width: 69%;
-        margin-top: 10px;
-        // border: $border;
-    }
-
-    img 
-    {
-        width: 400px;
-    }
-    button 
-    {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        
-        // -----------
-       cursor: pointer;
-      
-   
-    }
-    
-    hr 
-    {
-        width: 400px;
-        position: absolute;
-        left: -300px;
-    }
-    
-
-    }
-
-.two
-{
-    position: absolute;
-    display: inline-block;
-    width: 300px;
-    color: $lightGray;
-    border: 1px solid $lightGray;
-    width: 250px;
-    right: 0;
-    margin-top: 200px;
-    transition: .5s;
-
-    img 
-    {
-       width: 100%;
-    }
-    p
-    {
-        font-size: 12px;
-        text-align: start;
-        
-        margin-top: 10px;
-        margin-bottom: 50px;
-    }
-    button 
-    {
-        position: absolute;
-        bottom: 0;
-        right: 0;       
-    }
-    
-
-    
-}
-.two:hover  
-    {
-        background-color: red;
-        
-    }
-
-.three
-    {
-        margin-top: 100px;
-        display: flex;
-        width: 780px;
-        right: 0px;
-        position: absolute;
-        color: $lightGray;
-        img 
-        {
-            width: 500px;
-            right: 0px;
-            position: absolute;
-        }
-        p
-        {
-            @extend %project-descr;
-            text-align: start;
-            margin-top: 10px;
-            margin-bottom: 50px;
-        }
-button {
-    position: absolute;
-    top: 200px;
-    left: 130px;
-    color: $lightGray;
-    font-size: 14px;
-    // -----------
-   cursor: pointer;
-}
-p 
-{
-    width: 100%;
-    text-align: end;
-}
-
-div
-
-    {
-        height: 400px;
-        width: 220px;
-        border: 1px solid $lightGray
-    }
-        
-    }
-
-.four
-{
-    display:flex;
-    width: 900px;
-    position: absolute;
-    color: $lightGray;
-    // right: 0;
-    top: 1300px;
-    transition: .5s;
-
-    p{
-        @extend %project-descr;
-        margin-right: 15px;
-    }
-    button 
-    {
-        top: 50px;
+        height: 500px;
         position: relative;
-        right: 80px;
+        width: 1000px;
+        height: 1900px;
+        margin: 0 auto;
+        padding-top: 50px;
     }
-    h2 
+}
+.ein
+{
+    p:first-child
     {
-        
-       margin-left: 20px;
+        width: 410px;
+        text-align: justify;
+        padding: 2px;
     }
-    img {
-height: 250px
+    .pii
+    {
+        width: 310px;
+        text-align: justify;
+        left: 240px;
+        position: relative;
+        top: -110px
     }
-    
+   
 }
 
-hr 
-    {
-        color: red;
-        width: 50px;
-        top: 50px;
-        position: absolute;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@function nav-clr($color) {
+    @if (lightness($color) > 50) {
+      @return #000;
+    } @else {
+      @return #fff;
     }
+  }
