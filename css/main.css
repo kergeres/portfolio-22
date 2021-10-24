@@ -9,6 +9,8 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  color: #707070;
 }
 
 ::-webkit-scrollbar {
@@ -34,12 +36,6 @@ html {
   background: #2d2d2d;
 }
 
-main {
-  font-family: "Poppins", sans-serif;
-  min-height: 1100px;
-  display: block;
-}
-
 nav ul {
   display: inline-block;
   position: fixed;
@@ -57,6 +53,11 @@ nav :hover {
   color: black;
 }
 
+a {
+  text-decoration: none;
+  color: unset;
+}
+
 header {
   width: 100%;
   background-color: burlywood;
@@ -71,7 +72,7 @@ header h1 {
   left: 40%;
   transform: translateX(-50%);
   font-size: 5em;
-  color: #222222;
+  color: #2d2d2d;
 }
 header h2 {
   border: 1px solid black;
@@ -89,7 +90,6 @@ header h2 {
 
 .four p, .three p, .one p {
   font-size: 14px;
-  color: #707070;
 }
 
 .projects-container {
@@ -107,7 +107,6 @@ header h2 {
   white-space: nowrap;
   background: none;
   border: none;
-  color: #707070;
   font-size: 14px;
   cursor: pointer;
   height: 20px;
@@ -120,7 +119,6 @@ header h2 {
   position: relative;
   display: inline-block;
   width: 400px;
-  color: #707070;
   margin-left: 90px;
 }
 .one h2 {
@@ -150,7 +148,6 @@ header h2 {
   position: absolute;
   display: inline-block;
   width: 300px;
-  color: #707070;
   border: 1px solid #707070;
   width: 250px;
   right: 0;
@@ -242,14 +239,13 @@ header h2 {
 }
 
 #about-me {
-  background-color: #8d8d8d;
   font-size: 14px;
 }
 #about-me .about-me-container {
   height: 500px;
   position: relative;
   width: 1000px;
-  height: 1900px;
+  height: 1050px;
   margin: 0 auto;
   padding-top: 50px;
 }
@@ -265,6 +261,114 @@ header h2 {
   left: 240px;
   position: relative;
   top: -110px;
+  border: 1px solid black;
+}
+
+.pic-container {
+  border: 1px solid black;
+  width: 300px;
+  position: absolute;
+  top: 60px;
+  right: 30px;
+}
+
+.beta {
+  width: 300px;
+  z-index: 1;
+  position: relative;
+}
+
+.alfa {
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+  top: 30px;
+  right: 50px;
+}
+
+.zwei {
+  display: flex;
+  width: 100vw;
+  left: -140px;
+  position: absolute;
+}
+.zwei img {
+  width: 750px;
+}
+.zwei p {
+  width: 300px;
+  margin-left: 5px;
+}
+
+#graphs {
+  width: 100%;
+  height: 400px;
+}
+#graphs .upper-container {
+  display: flex;
+}
+#graphs .upper-container div {
+  width: 70px;
+  height: 70px;
+  background-color: rebeccapurple;
+  margin: 15px;
+}
+#graphs .lower-container {
+  display: flex;
+  justify-content: flex-end;
+}
+#graphs .lower-container div {
+  width: 70px;
+  height: 70px;
+  background-color: #393c4b;
+  margin: 15px;
+}
+
+#skills {
+  display: flex;
+  justify-content: center;
+}
+#skills .content-container {
+  width: 800px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+#skills table {
+  margin-bottom: 200px;
+}
+#skills tr :nth-child(2) {
+  padding-left: 90px;
+}
+#skills td {
+  font-size: 40px;
+  width: 320px;
+  display: inline-block;
+  margin: 0;
+  line-height: 0px;
+  height: 70px;
+}
+
+footer .contact {
+  display: block;
+  width: 300px;
+  margin-left: 100px;
+  list-style: none;
+  font-size: 18px;
+  margin-bottom: 50px;
+  font-family: "Poppins", sans-serif;
+}
+footer .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  padding-right: 40px;
+  margin-bottom: 30px;
+}
+footer .links li {
+  list-style: none;
+  width: auto;
+  margin: 5px;
 }
 
 /*# sourceMappingURL=main.css.map */
