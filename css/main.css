@@ -100,7 +100,8 @@ header h2 {
 .projects-container {
   position: relative;
   width: 1000px;
-  height: 1700px;
+  height: 1555px;
+  padding-top: 50px;
   margin: 0 auto;
   margin-right: 150px;
 }
@@ -250,7 +251,7 @@ header h2 {
   height: 500px;
   position: relative;
   width: 1000px;
-  height: 1050px;
+  height: 975px;
   margin: 0 auto;
   padding-top: 50px;
 }
@@ -348,16 +349,16 @@ header h2 {
 #skills table {
   margin-top: 80px;
   margin-bottom: 200px;
-  width: auto;
+  width: 70vw;
 }
 #skills tr :nth-child(2) {
-  padding-left: 90px;
+  padding-left: 15vw;
 }
 #skills td {
   font-size: 4vw;
   min-width: 340px;
   margin: 10px;
-  line-height: auto;
+  line-height: 100px;
   height: auto;
 }
 
