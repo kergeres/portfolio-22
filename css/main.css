@@ -71,7 +71,7 @@ html {
   opacity: 0;
   background-color: white;
   margin: auto;
-  animation: animWhiteBgAnimDiv 0.3s forwards 5s;
+  animation: animWhiteBgAnimDiv 0.3s forwards 4.5s;
 }
 
 @keyframes animWhiteBgAnimDiv {
@@ -101,6 +101,28 @@ html {
     width: 250px;
   }
 }
+.f-d {
+  display: inline-block;
+  position: absolute;
+  top: 80vh;
+  opacity: 0;
+  animation: fD 5s infinite 7.3s ease-in-out;
+  display: inline-block;
+  width: 350px;
+  font-size: 32px;
+}
+
+.e-m-p {
+  font-size: 32px;
+  display: inline-block;
+  position: absolute;
+  top: 80vh;
+  opacity: 0;
+  animation: eMP 5s infinite 4.8s ease-in-out;
+  display: inline-block;
+  width: 350px;
+}
+
 @keyframes animWhiteBgAnimIn {
   0% {
     opacity: 0;
@@ -166,6 +188,124 @@ html {
     opacity: 1;
   }
 }
+@keyframes eMP {
+  0% {
+    left: 110%;
+    opacity: 1;
+  }
+  50% {
+    left: 50%;
+    opacity: 1;
+  }
+  65% {
+    left: 50%;
+    opacity: 1;
+  }
+  100% {
+    left: -60%;
+    opacity: 1;
+  }
+}
+@keyframes fD {
+  0% {
+    left: 110%;
+    opacity: 1;
+  }
+  50% {
+    left: 50%;
+    opacity: 1;
+  }
+  65% {
+    left: 50%;
+    opacity: 1;
+  }
+  100% {
+    left: -60%;
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .anim-white-border {
+    width: 100px;
+    height: 100px;
+    transform: translate(125%, -50%);
+  }
+
+  .anim-white-border-in {
+    width: 75px;
+    height: 75px;
+  }
+
+  @keyframes animWhiteBgAnim {
+    0% {
+      left: -50%;
+      opacity: 1;
+      width: 100px;
+      transform: translate(125%, -50%);
+    }
+    85% {
+      width: 100px;
+      transform: translate(125%, -50%);
+    }
+    100% {
+      left: 0%;
+      opacity: 1;
+      width: 100px;
+      transform: translate(125%, -50%);
+    }
+  }
+  @keyframes animWhiteBgAnimIn {
+    0% {
+      opacity: 0;
+      width: 100px;
+      height: 100px;
+    }
+    50% {
+      width: 100px;
+      height: 100px;
+    }
+    100% {
+      opacity: 1;
+      width: 75px;
+      height: 75px;
+    }
+  }
+  @keyframes eMP {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes fD {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  .f-d {
+    animation: fD 7s infinite 4.8s ease-in-out;
+  }
+
+  .e-m-p {
+    animation: eMP 7s infinite 7.3 ease-in-out;
+  }
+}
 nav ul {
   animation: menuAnimation 1s forwards 5.3s;
   display: inline-block;
@@ -200,7 +340,6 @@ header {
 }
 header h1 {
   font-family: "Roboto", sans-serif;
-  border: 1px solid black;
   display: inline-block;
   position: absolute;
   left: 40%;
@@ -210,32 +349,17 @@ header h1 {
   opacity: 0;
   animation: nameAnimation 1s forwards 5.3s;
 }
-header h2 {
-  border: 1px solid black;
-  display: inline-block;
-  position: absolute;
-  top: 86vh;
-  left: 40%;
-}
-
-#projects {
-  position: relative;
-  width: 1000px;
-  height: auto;
-  margin: 100px auto;
-}
 
 .four p, .three p, .one p {
   font-size: 14px;
 }
 
 .projects-container {
-  position: relative;
+  display: grid;
+  margin: 80px auto 20px auto;
+  grid-template-rows: 750px 450px 500px;
+  grid-template-areas: "one two" "three three" "four four";
   width: 1000px;
-  height: 1555px;
-  padding-top: 50px;
-  margin: 0 auto;
-  margin-right: 150px;
 }
 .projects-container h2 {
   color: #2d2d2d;
@@ -254,14 +378,13 @@ header h2 {
 }
 
 .one {
-  position: relative;
-  display: inline-block;
+  grid-area: one;
   width: 400px;
-  margin-left: 90px;
+  height: 570px;
 }
 .one h2 {
   font-size: 20px;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 .one p {
   text-align: start;
@@ -269,28 +392,30 @@ header h2 {
   margin-top: 10px;
 }
 .one img {
-  width: 400px;
+  width: 100%;
 }
 .one button {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  right: 200px;
+  margin-top: 20px;
 }
 .one hr {
   width: 400px;
   position: absolute;
-  left: -300px;
+  left: -200px;
 }
 
 .two {
-  position: absolute;
-  display: inline-block;
+  grid-area: two;
+  height: 500px;
   width: 300px;
+  left: -100px;
+  top: 100px;
+  position: relative;
   border: 1px solid #707070;
-  width: 250px;
-  right: 0;
-  margin-top: 200px;
-  transition: 0.5s;
+  border: 1px solid #2d2d2d;
+}
+.two h2 {
+  margin-left: 8px;
 }
 .two img {
   width: 100%;
@@ -298,67 +423,72 @@ header h2 {
 .two p {
   font-size: 12px;
   text-align: start;
-  margin-top: 10px;
-  margin-bottom: 50px;
+  margin: 10px 50px 0 8px;
 }
 .two button {
-  position: absolute;
   bottom: 0;
   right: 0;
+  margin-left: 8px;
 }
 
 .two:hover {
-  background-color: red;
+  background-color: gray;
+  color: white;
+}
+.two:hover h2,
+.two:hover button {
+  color: white;
 }
 
 .three {
-  margin-top: 100px;
+  grid-area: three;
+  height: 500px;
   display: flex;
   width: 780px;
-  right: 0px;
-  position: absolute;
+  justify-content: space-between;
   color: #707070;
+  align-items: flex-start;
+}
+.three h2 {
+  text-align: end;
 }
 .three img {
   width: 500px;
+  top: -100px;
   right: 0px;
-  position: absolute;
 }
 .three p {
   text-align: start;
   margin-top: 10px;
   margin-bottom: 50px;
-}
-.three button {
-  position: absolute;
-  top: 200px;
-  left: 130px;
-}
-.three p {
   width: 100%;
   text-align: end;
 }
+.three button {
+  top: 200px;
+  margin-left: 140px;
+}
 .three div {
   height: 400px;
+  padding-right: 5px;
   width: 220px;
-  border: 1px solid #707070;
 }
 
 .four {
+  grid-area: four;
   display: flex;
-  min-width: 900px;
-  position: absolute;
+  height: 400px;
+  width: 1000px;
   color: #707070;
-  top: 1250px;
   transition: 0.5s;
 }
 .four p {
   margin-right: 15px;
 }
 .four button {
-  top: 50px;
+  top: 40px;
+  right: 70px;
   position: relative;
-  right: 80px;
 }
 .four h2 {
   margin-left: 20px;
@@ -380,17 +510,26 @@ header h2 {
   font-size: 14px;
 }
 #about-me .about-me-container {
-  height: 500px;
+  height: 950px;
   position: relative;
   width: 1000px;
-  height: 1050px;
-  margin: 0 auto;
-  padding-top: 50px;
+  margin: 0 auto 80px auto;
+  display: grid;
+  grid-template-areas: "ein" "zwei";
+}
+
+.text {
+  grid-area: text;
+  width: 570px;
+  height: 400px;
 }
 
 .ein {
-  margin-bottom: 80px;
+  grid-area: ein;
+  margin-bottom: 0px;
   width: auto;
+  display: grid;
+  grid-template-areas: "text picContainer";
 }
 .ein p:first-child {
   width: 410px;
@@ -403,12 +542,12 @@ header h2 {
   left: 240px;
   position: relative;
   top: -110px;
-  border: 1px solid black;
 }
 
 .pic-container {
   border: 1px solid black;
   width: 300px;
+  height: 300px;
   position: absolute;
   top: 60px;
   right: 30px;
@@ -429,12 +568,15 @@ header h2 {
 }
 
 .zwei {
+  grid-area: zwei;
   display: flex;
+  height: 300px;
   left: -140px;
-  position: absolute;
+  border: 1px solid black;
 }
 .zwei img {
-  width: 750px;
+  height: 100%;
+  align-self: center;
 }
 .zwei p {
   width: 300px;
@@ -514,6 +656,132 @@ footer .links li {
   list-style: none;
   width: auto;
   margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  nav ul {
+    position: absolute;
+  }
+
+  .upper-container div,
+.lower-container div {
+    margin: 20px 5px !important;
+    height: 30px !important;
+    width: 30px !important;
+  }
+
+  .contact {
+    margin-left: 30px !important;
+  }
+
+  .projects-container {
+    display: grid;
+    margin: 80px auto 20px auto;
+    grid-template-rows: 750px 700px 700px 700px;
+    grid-template-areas: "one" "two" "three" "four";
+    width: 100vw;
+  }
+
+  .one,
+.three,
+.four {
+    width: 100vw;
+  }
+
+  .one {
+    border: 1px solid black;
+    padding-left: 8px;
+  }
+  .one img {
+    width: 90%;
+  }
+
+  .two {
+    margin: 0 auto;
+    height: 550px;
+    width: 80vw;
+    left: 0;
+    top: 0;
+  }
+
+  .three {
+    flex-direction: column;
+  }
+  .three img {
+    width: 100vw;
+  }
+
+  .four {
+    flex-direction: column;
+  }
+  .four img {
+    width: 100vw;
+    height: auto;
+  }
+
+  .about-me-container {
+    height: auto !important;
+    width: 100vw !important;
+  }
+
+  .ein {
+    grid-template-areas: "text" "picContainer";
+    height: auto;
+  }
+
+  .pii {
+    left: 0px !important;
+    top: unset !important;
+    width: 95vw !important;
+  }
+
+  .prim {
+    width: 95vw !important;
+  }
+  .prim br {
+    content: " ";
+    display: none;
+  }
+
+  .pic-container {
+    position: unset;
+    width: 100vw;
+    height: auto;
+    margin-bottom: 40px;
+  }
+
+  .alfa {
+    position: unset;
+  }
+
+  .zwei {
+    display: block;
+    height: auto;
+  }
+  .zwei p {
+    width: 100vw;
+    margin-left: 0;
+    padding: 5px;
+  }
+  .zwei img {
+    height: auto;
+    width: 100vw;
+  }
+
+  .text {
+    width: 100vw;
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  #skills td {
+    min-width: unset;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

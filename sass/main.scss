@@ -36,10 +36,8 @@ header {
   height: 100vh;
   h1 {
     font-family: $secondaryText;
-    border: $border;
     display: inline-block;
     position: absolute;
-
     left: 40%;
     transform: translateX(-50%);
     font-size: 5em;
@@ -47,34 +45,30 @@ header {
     opacity: 0;
     animation: nameAnimation 1s forwards $name-and-menu-delay;
   }
-  h2 {
-    border: $border;
-    display: inline-block;
-    position: absolute;
-    top: 86vh;
-    left: 40%;
-  }
 }
 
-#projects {
-  position: relative;
-  width: 1000px;
-  height: auto;
-  // border: $border;
-  margin: 100px auto;
-}
+// #projects {
+//   position: relative;
+//   width: 1000px;
+//   height: auto;
+//   // border: $border;
+//   margin: 100px auto;
+// }
 
 %project-descr {
   font-size: 14px;
 }
 
 .projects-container {
-  position: relative;
+  display: grid;
+  margin: 80px auto 20px auto;
+  grid-template-rows: 750px 450px 500px;
+  grid-template-areas:
+    "one two"
+    "three three"
+    "four four";
   width: 1000px;
-  height: 1555px;
-  padding-top: 50px;
-  margin: 0 auto;
-  margin-right: 150px;
+
   h2 {
     color: $darkGray;
     white-space: nowrap;
@@ -93,13 +87,12 @@ header {
 }
 
 .one {
-  position: relative;
-  display: inline-block;
+  grid-area: one;
   width: 400px;
-  margin-left: 90px;
+  height: 570px;
   h2 {
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 0px;
   }
   p {
     @extend %project-descr;
@@ -109,99 +102,114 @@ header {
     // border: $border;
   }
   img {
-    width: 400px;
+    width: 100%;
   }
   button {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    right: 200px;
+    margin-top: 20px;
   }
   hr {
     width: 400px;
     position: absolute;
-    left: -300px;
+    left: -200px;
   }
 }
 
 .two {
-  position: absolute;
-  display: inline-block;
+  grid-area: two;
+  height: 500px;
   width: 300px;
+  left: -100px;
+  top: 100px;
+  position: relative;
   border: 1px solid $lightGray;
-  width: 250px;
-  right: 0;
-  margin-top: 200px;
-  transition: 0.5s;
+  border: 1px solid $darkGray;
+
+  h2 {
+    margin-left: 8px;
+  }
   img {
     width: 100%;
   }
   p {
     font-size: 12px;
     text-align: start;
-    margin-top: 10px;
-    margin-bottom: 50px;
+    margin: 10px 50px 0 8px;
   }
   button {
-    position: absolute;
     bottom: 0;
     right: 0;
+    margin-left: 8px;
   }
 }
 
 .two:hover {
-  background-color: red;
+  background-color: gray;
+  color: white;
+  h2,
+  button {
+    color: white;
+  }
 }
 
 .three {
-  margin-top: 100px;
+  grid-area: three;
+  height: 500px;
   display: flex;
   width: 780px;
-  right: 0px;
-  position: absolute;
+  justify-content: space-between;
   color: $lightGray;
+  align-items: flex-start;
+
+  h2 {
+    text-align: end;
+  }
   img {
     width: 500px;
+    top: -100px;
     right: 0px;
-    position: absolute;
   }
   p {
     @extend %project-descr;
     text-align: start;
     margin-top: 10px;
     margin-bottom: 50px;
-  }
-  button {
-    position: absolute;
-    top: 200px;
-    left: 130px;
-  }
-  p {
+
     width: 100%;
     text-align: end;
   }
+  button {
+    top: 200px;
+    margin-left: 140px;
+  }
+
   div {
     height: 400px;
+    padding-right: 5px;
     width: 220px;
-    border: 1px solid $lightGray;
+    // border: 1px solid $lightGray;
   }
 }
 
 .four {
+  grid-area: four;
+
   display: flex;
-  min-width: 900px;
-  position: absolute;
+  height: 400px;
+  width: 1000px;
+
   color: $lightGray;
   // right: 0;
-  top: 1250px;
+
   transition: 0.5s;
   p {
     @extend %project-descr;
     margin-right: 15px;
   }
   button {
-    top: 50px;
+    top: 40px;
+    right: 70px;
     position: relative;
-    right: 80px;
   }
   h2 {
     margin-left: 20px;
@@ -225,17 +233,32 @@ header {
   font-size: 14px;
 
   .about-me-container {
-    height: 500px;
+    height: 950px;
     position: relative;
     width: 1000px;
-    height: 1050px;
-    margin: 0 auto;
-    padding-top: 50px;
+
+    margin: 0 auto 80px auto;
+    display: grid;
+    grid-template-areas:
+      "ein"
+      "zwei";
   }
 }
+.text {
+  grid-area: text;
+
+  width: 570px;
+  height: 400px;
+}
+
 .ein {
-  margin-bottom: 80px;
+  grid-area: ein;
+  margin-bottom: 0px;
   width: auto;
+  display: grid;
+
+  grid-template-areas: "text picContainer";
+
   p:first-child {
     width: 410px;
     text-align: justify;
@@ -247,13 +270,13 @@ header {
     left: 240px;
     position: relative;
     top: -110px;
-    border: $border;
   }
 }
 
 .pic-container {
   border: $border;
   width: 300px;
+  height: 300px;
   position: absolute;
   top: 60px;
   right: 30px;
@@ -272,12 +295,16 @@ header {
   right: 50px;
 }
 .zwei {
+  grid-area: zwei;
   display: flex;
+  height: 300px;
   // width: 100vw;
   left: -140px;
-  position: absolute;
+  border: $border;
+
   img {
-    width: 750px;
+    height: 100%;
+    align-self: center;
   }
   p {
     width: 300px;
@@ -373,10 +400,125 @@ footer {
   }
 }
 
-@function nav-clr($color) {
-  @if (lightness($color) > 50) {
-    @return #000;
-  } @else {
-    @return #fff;
+@media screen and (max-width: 768px) {
+  main {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  nav {
+    ul {
+      position: absolute;
+    }
+  }
+  .upper-container,
+  .lower-container {
+    div {
+      margin: 20px 5px !important;
+      height: 30px !important;
+      width: 30px !important;
+    }
+  }
+  .contact {
+    margin-left: 30px !important;
+  }
+  .projects-container {
+    display: grid;
+    margin: 80px auto 20px auto;
+    grid-template-rows: 750px 700px 700px 700px;
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four";
+    width: 100vw;
+  }
+  .one,
+  .three,
+  .four {
+    width: 100vw;
+  }
+
+  .one {
+    border: $border;
+    padding-left: 8px;
+    img {
+      width: 90%;
+    }
+  }
+
+  .two {
+    margin: 0 auto;
+    height: 550px;
+    width: 80vw;
+    left: 0;
+    top: 0;
+  }
+
+  .three {
+    flex-direction: column;
+    img {
+      width: 100vw;
+    }
+  }
+  .four {
+    flex-direction: column;
+    img {
+      width: 100vw;
+      height: auto;
+    }
+  }
+  .about-me-container {
+    height: auto !important;
+    width: 100vw !important;
+  }
+  .ein {
+    grid-template-areas:
+      "text"
+      "picContainer";
+    height: auto;
+  }
+  .pii {
+    left: 0px !important;
+    top: unset !important;
+    width: 95vw !important;
+  }
+  .prim {
+    width: 95vw !important;
+    br {
+      content: " ";
+      display: none;
+    }
+  }
+  .pic-container {
+    position: unset;
+    width: 100vw;
+    height: auto;
+    margin-bottom: 40px;
+  }
+  .alfa {
+    position: unset;
+  }
+  .zwei {
+    display: block;
+    height: auto;
+    p {
+      width: 100vw;
+      margin-left: 0;
+      padding: 5px;
+    }
+    img {
+      height: auto;
+      width: 100vw;
+    }
+  }
+  .text {
+    width: 100vw;
+    font-size: 12px;
+    padding: 5px;
+  }
+  #skills {
+    td {
+      min-width: unset;
+    }
   }
 }

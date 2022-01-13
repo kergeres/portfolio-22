@@ -21,8 +21,6 @@ $animWhiteAnim-delay: 1s;
   display: flex;
 }
 .anim-white-border-in {
-  //   height: 150px;
-  //   width: 150px;
   border: 2px solid white;
   opacity: 0;
   animation: animWhiteBgAnimIn 1.5s forwards 2s, spinClockin 3s forwards 3s;
@@ -33,7 +31,7 @@ $animWhiteAnim-delay: 1s;
   opacity: 0;
   background-color: white;
   margin: auto;
-  animation: animWhiteBgAnimDiv 0.3s forwards 5s;
+  animation: animWhiteBgAnimDiv 0.3s forwards 4.5s;
 }
 @keyframes animWhiteBgAnimDiv {
   0% {
@@ -63,6 +61,26 @@ $animWhiteAnim-delay: 1s;
   }
 }
 
+.f-d {
+  display: inline-block;
+  position: absolute;
+  top: 80vh;
+  opacity: 0;
+  animation: fD 5s infinite 7.3s ease-in-out;
+  display: inline-block;
+  width: 350px;
+  font-size: 32px;
+}
+.e-m-p {
+  font-size: 32px;
+  display: inline-block;
+  position: absolute;
+  top: 80vh;
+  opacity: 0;
+  animation: eMP 5s infinite 4.8s ease-in-out;
+  display: inline-block;
+  width: 350px;
+}
 @keyframes animWhiteBgAnimIn {
   0% {
     opacity: 0;
@@ -133,5 +151,128 @@ $animWhiteAnim-delay: 1s;
   100% {
     top: 60vh;
     opacity: 1;
+  }
+}
+
+@keyframes eMP {
+  0% {
+    left: 110%;
+    opacity: 1;
+  }
+  50% {
+    left: 50%;
+    opacity: 1;
+  }
+  65% {
+    left: 50%;
+    opacity: 1;
+  }
+  100% {
+    left: -60%;
+    opacity: 1;
+  }
+}
+@keyframes fD {
+  0% {
+    left: 110%;
+    opacity: 1;
+  }
+  50% {
+    left: 50%;
+    opacity: 1;
+  }
+  65% {
+    left: 50%;
+    opacity: 1;
+  }
+  100% {
+    left: -60%;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .anim-white-border {
+    width: 100px;
+    height: 100px;
+    transform: translate(125%, -50%);
+  }
+  .anim-white-border-in {
+    width: 75px;
+    height: 75px;
+  }
+
+  @keyframes animWhiteBgAnim {
+    0% {
+      left: -50%;
+      opacity: 1;
+      width: 100px;
+      transform: translate(125%, -50%);
+    }
+    85% {
+      width: 100px;
+      transform: translate(125%, -50%);
+    }
+    100% {
+      left: 0%;
+      opacity: 1;
+      width: 100px;
+      transform: translate(125%, -50%);
+    }
+  }
+  @keyframes animWhiteBgAnimIn {
+    0% {
+      opacity: 0;
+      width: 100px;
+      height: 100px;
+    }
+    50% {
+      width: 100px;
+      height: 100px;
+    }
+
+    100% {
+      opacity: 1;
+      width: 75px;
+      height: 75px;
+    }
+  }
+  @keyframes eMP {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes fD {
+    0% {
+      opacity: 0;
+    }
+
+    25% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .f-d {
+    animation: fD 7s infinite 4.8s ease-in-out;
+  }
+  .e-m-p {
+    animation: eMP 7s infinite 7.3 ease-in-out;
   }
 }
