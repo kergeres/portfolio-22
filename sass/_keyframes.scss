@@ -258,10 +258,10 @@ $animWhiteAnim-delay: 1s;
     }
 
     25% {
-      opacity: 0;
+      opacity: 1;
     }
     75% {
-      opacity: 1;
+      opacity: 0;
     }
 
     100% {
@@ -270,9 +270,9 @@ $animWhiteAnim-delay: 1s;
   }
 
   .f-d {
-    animation: fD 7s infinite 4.8s ease-in-out;
+    animation: fD 9s infinite 4.8s;
   }
   .e-m-p {
-    animation: eMP 7s infinite 7.3 ease-in-out;
+    animation: eMP 9s infinite 8.3;
   }
 }

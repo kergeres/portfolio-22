@@ -29,13 +29,15 @@ html {
 /* Track */
 
 ::-webkit-scrollbar-track {
-  background: $lightGray;
+  background: rgba(0, 0, 0, 0);
+  opacity: 0;
 }
 
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
-  background: $darkGray;
+  background: #cfcfcf;
+  border-radius: 25px;
 }
 
 /* Handle on hover */
@@ -45,7 +47,7 @@ html {
 }
 
 ::-moz-selection {
-  background: #831005;
+  background: $darkGray;
 }
 
 ::selection {
