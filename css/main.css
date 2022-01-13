@@ -53,14 +53,30 @@ html {
   border: 2px solid white;
   position: absolute;
   top: 50%;
-  transform: translate(200%, -50%);
+  transform: translate(-50%, -50%);
   justify-content: center;
   align-items: center;
-  opacity: 0;
+  opacity: 1;
+  left: 0%;
   animation: animWhiteBgAnim 1.5s forwards 1s, spinClockOut 1.5s forwards 3s;
   display: flex;
 }
 
+@keyframes animWhiteBgAnim {
+  0% {
+    left: -200%;
+    opacity: 1;
+    width: 500px;
+  }
+  85% {
+    width: 250px;
+  }
+  100% {
+    left: 50%;
+    opacity: 1;
+    width: 250px;
+  }
+}
 .anim-white-border-in {
   border: 2px solid white;
   opacity: 0;
@@ -88,41 +104,31 @@ html {
     width: 100%;
   }
 }
-@keyframes animWhiteBgAnim {
-  0% {
-    left: -200%;
-    opacity: 1;
-    width: 500px;
-  }
-  85% {
-    width: 250px;
-  }
-  100% {
-    left: 0%;
-    opacity: 1;
-    width: 250px;
-  }
-}
 .f-d {
   display: inline-block;
-  position: absolute;
-  top: 80vh;
+  position: relative;
   opacity: 0;
   animation: fD 5s infinite 7.3s ease-in-out;
   display: inline-block;
   width: 350px;
   font-size: 32px;
+  top: 95px;
+  height: 40px;
+  white-space: nowrap;
 }
 
 .e-m-p {
   font-size: 32px;
   display: inline-block;
-  position: absolute;
-  top: 80vh;
+  position: relative;
+  top: 22px;
+  white-space: nowrap;
   opacity: 0;
   animation: eMP 5s infinite 4.8s ease-in-out;
   display: inline-block;
   width: 350px;
+  top: 95px;
+  height: 40px;
 }
 
 @keyframes animWhiteBgAnimIn {
@@ -143,10 +149,10 @@ html {
 }
 @keyframes spinClockOut {
   0% {
-    transform: translate(200%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
   }
   100% {
-    transform: translate(200%, -50%) rotate(90deg);
+    transform: translate(-50%, -50%) rotate(90deg);
   }
 }
 @keyframes spinClockin {
@@ -182,25 +188,25 @@ html {
 }
 @keyframes nameAnimation {
   0% {
-    top: 100vh;
+    top: -26px;
     opacity: 0.1;
   }
   100% {
-    top: 60vh;
+    top: -46px;
     opacity: 1;
   }
 }
 @keyframes eMP {
   0% {
-    left: 110%;
+    left: 160%;
     opacity: 1;
   }
   50% {
-    left: 50%;
+    left: 10%;
     opacity: 1;
   }
   65% {
-    left: 50%;
+    left: 10%;
     opacity: 1;
   }
   100% {
@@ -210,27 +216,26 @@ html {
 }
 @keyframes fD {
   0% {
-    left: 110%;
+    left: 160%;
     opacity: 1;
   }
   50% {
-    left: 50%;
+    left: -13%;
     opacity: 1;
   }
   65% {
-    left: 50%;
+    left: -13%;
     opacity: 1;
   }
   100% {
-    left: -60%;
+    left: -90%;
     opacity: 1;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
   .anim-white-border {
     width: 100px;
     height: 100px;
-    transform: translate(125%, -50%);
   }
 
   .anim-white-border-in {
@@ -240,20 +245,18 @@ html {
 
   @keyframes animWhiteBgAnim {
     0% {
-      left: -50%;
+      left: -200%;
       opacity: 1;
       width: 100px;
-      transform: translate(125%, -50%);
     }
     85% {
       width: 100px;
-      transform: translate(125%, -50%);
     }
     100% {
-      left: 0%;
+      left: 50%;
       opacity: 1;
       width: 100px;
-      transform: translate(125%, -50%);
+      transform: translate(-50%, -50%);
     }
   }
   @keyframes animWhiteBgAnimIn {
@@ -286,26 +289,40 @@ html {
       opacity: 0;
     }
   }
+  .name-container {
+    justify-content: center;
+    display: flex;
+  }
+
   @keyframes fD {
     0% {
       opacity: 0;
+      left: -50%;
     }
     25% {
       opacity: 1;
+      left: -50%;
     }
     75% {
       opacity: 0;
+      left: -50%;
     }
     100% {
       opacity: 0;
+      left: -50%;
     }
   }
   .f-d {
     animation: fD 9s infinite 4.8s;
+    height: 40px;
+    transform: translateX(-37%);
+    width: 100vw !important;
   }
 
   .e-m-p {
     animation: eMP 9s infinite 8.3;
+    transform: translateX(9%);
+    width: 100vw !important;
   }
 }
 nav ul {
@@ -335,19 +352,30 @@ a:hover {
   color: black;
 }
 
+.name-container {
+  height: 160px;
+  width: 100%;
+  position: absolute;
+  top: 25vh;
+  display: flex;
+}
+
 header {
   width: 100%;
   background-color: white;
   height: 100vh;
 }
 header h1 {
-  font-family: "Roboto", sans-serif;
+  font-family: "arial";
   display: inline-block;
-  position: absolute;
+  white-space: nowrap;
+  position: relative;
   left: 40%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 50%);
   font-size: 5em;
   color: #2d2d2d;
+  height: 90px;
+  top: -46px;
   opacity: 0;
   animation: nameAnimation 1s forwards 5.3s;
 }
@@ -660,7 +688,13 @@ footer .links li {
   margin: 5px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
+  header h1 {
+    font-size: 3em;
+    transform: translate(58%, 50%);
+    white-space: nowrap;
+  }
+
   main {
     width: 100vw;
     overflow-x: hidden;
@@ -684,7 +718,7 @@ footer .links li {
   .projects-container {
     display: grid;
     margin: 80px auto 20px auto;
-    grid-template-rows: 750px 700px 700px 700px;
+    grid-template-rows: 750px auto 700px 700px;
     grid-template-areas: "one" "two" "three" "four";
     width: 100vw;
   }
@@ -698,6 +732,7 @@ footer .links li {
   .one {
     border: 1px solid black;
     padding-left: 8px;
+    height: auto;
   }
   .one img {
     width: 90%;
@@ -708,11 +743,12 @@ footer .links li {
   }
 
   .two {
-    margin: 0 auto;
+    margin: 0 auto 80px auto;
     min-height: 550px;
     width: 80vw;
     left: 0;
     top: 0;
+    height: auto;
   }
   .two button {
     margin-top: 20px;
@@ -732,6 +768,9 @@ footer .links li {
   }
   .three div {
     height: 350px;
+  }
+  .three button {
+    margin-bottom: 20px;
   }
 
   .four {

@@ -13,12 +13,29 @@ $animWhiteAnim-delay: 1s;
   border: 2px solid white;
   position: absolute;
   top: 50%;
-  transform: translate(200%, -50%);
+  transform: translate(-50%, -50%);
   justify-content: center;
   align-items: center;
-  opacity: 0;
+  opacity: 1;
+
+  left: 0%;
   animation: animWhiteBgAnim 1.5s forwards 1s, spinClockOut 1.5s forwards 3s;
   display: flex;
+}
+@keyframes animWhiteBgAnim {
+  0% {
+    left: -200%;
+    opacity: 1;
+    width: 500px;
+  }
+  85% {
+    width: 250px;
+  }
+  100% {
+    left: 50%;
+    opacity: 1;
+    width: 250px;
+  }
 }
 .anim-white-border-in {
   border: 2px solid white;
@@ -45,41 +62,32 @@ $animWhiteAnim-delay: 1s;
     width: 100%;
   }
 }
-@keyframes animWhiteBgAnim {
-  0% {
-    left: -200%;
-    opacity: 1;
-    width: 500px;
-  }
-  85% {
-    width: 250px;
-  }
-  100% {
-    left: 0%;
-    opacity: 1;
-    width: 250px;
-  }
-}
 
 .f-d {
   display: inline-block;
-  position: absolute;
-  top: 80vh;
+  position: relative;
   opacity: 0;
   animation: fD 5s infinite 7.3s ease-in-out;
   display: inline-block;
   width: 350px;
   font-size: 32px;
+  top: 95px;
+  height: 40px;
+  white-space: nowrap;
 }
 .e-m-p {
   font-size: 32px;
   display: inline-block;
-  position: absolute;
-  top: 80vh;
+  position: relative;
+  top: 22px;
+  white-space: nowrap;
+
   opacity: 0;
   animation: eMP 5s infinite 4.8s ease-in-out;
   display: inline-block;
   width: 350px;
+  top: 95px;
+  height: 40px;
 }
 @keyframes animWhiteBgAnimIn {
   0% {
@@ -102,12 +110,12 @@ $animWhiteAnim-delay: 1s;
 
 @keyframes spinClockOut {
   0% {
-    transform: translate(200%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
   }
   85% {
   }
   100% {
-    transform: translate(200%, -50%) rotate(90deg);
+    transform: translate(-50%, -50%) rotate(90deg);
   }
 }
 
@@ -145,26 +153,26 @@ $animWhiteAnim-delay: 1s;
 
 @keyframes nameAnimation {
   0% {
-    top: 100vh;
+    top: -26px;
     opacity: 0.1;
   }
   100% {
-    top: 60vh;
+    top: -46px;
     opacity: 1;
   }
 }
 
 @keyframes eMP {
   0% {
-    left: 110%;
+    left: 160%;
     opacity: 1;
   }
   50% {
-    left: 50%;
+    left: 10%;
     opacity: 1;
   }
   65% {
-    left: 50%;
+    left: 10%;
     opacity: 1;
   }
   100% {
@@ -174,28 +182,27 @@ $animWhiteAnim-delay: 1s;
 }
 @keyframes fD {
   0% {
-    left: 110%;
+    left: 160%;
     opacity: 1;
   }
   50% {
-    left: 50%;
+    left: -13%;
     opacity: 1;
   }
   65% {
-    left: 50%;
+    left: -13%;
     opacity: 1;
   }
   100% {
-    left: -60%;
+    left: -90%;
     opacity: 1;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
   .anim-white-border {
     width: 100px;
     height: 100px;
-    transform: translate(125%, -50%);
   }
   .anim-white-border-in {
     width: 75px;
@@ -204,20 +211,18 @@ $animWhiteAnim-delay: 1s;
 
   @keyframes animWhiteBgAnim {
     0% {
-      left: -50%;
+      left: -200%;
       opacity: 1;
       width: 100px;
-      transform: translate(125%, -50%);
     }
     85% {
       width: 100px;
-      transform: translate(125%, -50%);
     }
     100% {
-      left: 0%;
+      left: 50%;
       opacity: 1;
       width: 100px;
-      transform: translate(125%, -50%);
+      transform: translate(-50%, -50%);
     }
   }
   @keyframes animWhiteBgAnimIn {
@@ -252,27 +257,41 @@ $animWhiteAnim-delay: 1s;
       opacity: 0;
     }
   }
+  .name-container {
+    justify-content: center;
+    display: flex;
+  }
   @keyframes fD {
     0% {
       opacity: 0;
+      left: -50%;
     }
 
     25% {
       opacity: 1;
+      left: -50%;
     }
     75% {
       opacity: 0;
+      left: -50%;
     }
 
     100% {
       opacity: 0;
+      left: -50%;
     }
   }
 
   .f-d {
     animation: fD 9s infinite 4.8s;
+    height: 40px;
+    transform: translateX(-37%);
+
+    width: 100vw !important;
   }
   .e-m-p {
     animation: eMP 9s infinite 8.3;
+    transform: translateX(9%);
+    width: 100vw !important;
   }
 }

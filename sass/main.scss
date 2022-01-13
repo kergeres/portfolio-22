@@ -29,19 +29,28 @@ a {
 a:hover {
   color: black;
 }
-
+.name-container {
+  height: 160px;
+  width: 100%;
+  position: absolute;
+  top: 25vh;
+  display: flex;
+}
 header {
   width: 100%;
   background-color: white;
   height: 100vh;
   h1 {
-    font-family: $secondaryText;
+    font-family: "arial";
     display: inline-block;
-    position: absolute;
+    white-space: nowrap;
+    position: relative;
     left: 40%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 50%);
     font-size: 5em;
     color: $darkGray;
+    height: 90px;
+    top: -46px;
     opacity: 0;
     animation: nameAnimation 1s forwards $name-and-menu-delay;
   }
@@ -400,7 +409,16 @@ footer {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
+  header {
+    h1 {
+      font-size: 3em;
+
+      transform: translate(58%, 50%);
+      white-space: nowrap;
+    }
+  }
+
   main {
     width: 100vw;
     overflow-x: hidden;
@@ -424,7 +442,7 @@ footer {
   .projects-container {
     display: grid;
     margin: 80px auto 20px auto;
-    grid-template-rows: 750px 700px 700px 700px;
+    grid-template-rows: 750px auto 700px 700px;
     grid-template-areas:
       "one"
       "two"
@@ -441,6 +459,7 @@ footer {
   .one {
     border: $border;
     padding-left: 8px;
+    height: auto;
     img {
       width: 90%;
     }
@@ -451,11 +470,12 @@ footer {
   }
 
   .two {
-    margin: 0 auto;
+    margin: 0 auto 80px auto;
     min-height: 550px;
     width: 80vw;
     left: 0;
     top: 0;
+    height: auto;
     button {
       margin-top: 20px;
     }
@@ -475,6 +495,9 @@ footer {
     }
     div {
       height: 350px;
+    }
+    button {
+      margin-bottom: 20px;
     }
   }
   .four {
