@@ -125,6 +125,7 @@ header {
 }
 
 .two {
+  transition: 0.5s;
   grid-area: two;
   height: 500px;
   width: 300px;
@@ -149,6 +150,7 @@ header {
     bottom: 0;
     right: 0;
     margin-left: 8px;
+    transition: 0.5s !important;
   }
 }
 
@@ -278,12 +280,12 @@ header {
     text-align: justify;
     left: 240px;
     position: relative;
-    top: -110px;
+    top: -160px;
   }
 }
 
 .pic-container {
-  border: $border;
+  border: 1px solid #606060;
   width: 300px;
   height: 300px;
   position: absolute;
@@ -291,8 +293,9 @@ header {
   right: 30px;
 }
 .beta {
-  width: 300px;
+  width: 301px;
   z-index: 1;
+  top: -1px;
   position: relative;
 }
 
@@ -306,7 +309,7 @@ header {
 .zwei {
   grid-area: zwei;
   display: flex;
-  height: 300px;
+  height: 245px;
   // width: 100vw;
   left: -140px;
   border: $border;
@@ -318,6 +321,21 @@ header {
   p {
     width: 300px;
     margin-left: 15px;
+  }
+}
+
+@for $i from 1 through 8 {
+  .upper-container div:nth-child(#{$i}) {
+    background-image: url("/img/hobbi/upper/hobby\ "+#{$i}+".jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}
+@for $i from 1 through 7 {
+  .lower-container div:nth-child(#{$i}) {
+    background-image: url("/img/hobbi/lower/hobby\ "+#{$i}+".jpg");
+    background-size: cover;
+    background-position: center;
   }
 }
 
@@ -336,6 +354,7 @@ header {
       height: 70px;
       background-color: rebeccapurple;
       margin: 15px;
+      cursor: pointer;
     }
   }
   .lower-container {
@@ -347,6 +366,7 @@ header {
       height: 70px;
       background-color: rgb(57, 60, 75);
       margin: 15px;
+      cursor: pointer;
     }
   }
 }
@@ -442,7 +462,7 @@ footer {
   .projects-container {
     display: grid;
     margin: 80px auto 20px auto;
-    grid-template-rows: 750px auto 700px 700px;
+    grid-template-rows: 850px auto 890px 700px;
     grid-template-areas:
       "one"
       "two"
@@ -495,9 +515,11 @@ footer {
     }
     div {
       height: 350px;
+      width: 50%;
     }
     button {
       margin-bottom: 20px;
+      margin-left: 50%;
     }
   }
   .four {
@@ -576,5 +598,19 @@ footer {
     td {
       min-width: unset;
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects-container {
+    display: grid;
+    margin: 80px auto 20px auto;
+    grid-template-rows: 750px auto 700px 700px;
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four";
+    width: 100vw;
   }
 }

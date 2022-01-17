@@ -435,6 +435,7 @@ header h1 {
 }
 
 .two {
+  transition: 0.5s;
   grid-area: two;
   height: 500px;
   width: 300px;
@@ -459,6 +460,7 @@ header h1 {
   bottom: 0;
   right: 0;
   margin-left: 8px;
+  transition: 0.5s !important;
 }
 
 .two:hover {
@@ -571,11 +573,11 @@ header h1 {
   text-align: justify;
   left: 240px;
   position: relative;
-  top: -110px;
+  top: -160px;
 }
 
 .pic-container {
-  border: 1px solid black;
+  border: 1px solid #606060;
   width: 300px;
   height: 300px;
   position: absolute;
@@ -584,8 +586,9 @@ header h1 {
 }
 
 .beta {
-  width: 300px;
+  width: 301px;
   z-index: 1;
+  top: -1px;
   position: relative;
 }
 
@@ -600,7 +603,7 @@ header h1 {
 .zwei {
   grid-area: zwei;
   display: flex;
-  height: 300px;
+  height: 245px;
   left: -140px;
   border: 1px solid black;
 }
@@ -611,6 +614,96 @@ header h1 {
 .zwei p {
   width: 300px;
   margin-left: 15px;
+}
+
+.upper-container div:nth-child(1) {
+  background-image: url("/img/hobbi/upper/hobby 1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.upper-container div:nth-child(2) {
+  background-image: url("/img/hobbi/upper/hobby 2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.upper-container div:nth-child(3) {
+  background-image: url("/img/hobbi/upper/hobby 3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.upper-container div:nth-child(4) {
+  background-image: url("/img/hobbi/upper/hobby 4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.upper-container div:nth-child(5) {
+  background-image: url("/img/hobbi/upper/hobby 5.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.upper-container div:nth-child(6) {
+  background-image: url("/img/hobbi/upper/hobby 6.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.upper-container div:nth-child(7) {
+  background-image: url("/img/hobbi/upper/hobby 7.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.upper-container div:nth-child(8) {
+  background-image: url("/img/hobbi/upper/hobby 8.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.lower-container div:nth-child(1) {
+  background-image: url("/img/hobbi/lower/hobby 1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.lower-container div:nth-child(2) {
+  background-image: url("/img/hobbi/lower/hobby 2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.lower-container div:nth-child(3) {
+  background-image: url("/img/hobbi/lower/hobby 3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.lower-container div:nth-child(4) {
+  background-image: url("/img/hobbi/lower/hobby 4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.lower-container div:nth-child(5) {
+  background-image: url("/img/hobbi/lower/hobby 5.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.lower-container div:nth-child(6) {
+  background-image: url("/img/hobbi/lower/hobby 6.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.lower-container div:nth-child(7) {
+  background-image: url("/img/hobbi/lower/hobby 7.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 #graphs {
@@ -628,6 +721,7 @@ header h1 {
   height: 70px;
   background-color: rebeccapurple;
   margin: 15px;
+  cursor: pointer;
 }
 #graphs .lower-container {
   display: flex;
@@ -638,6 +732,7 @@ header h1 {
   height: 70px;
   background-color: #393c4b;
   margin: 15px;
+  cursor: pointer;
 }
 
 #skills {
@@ -718,7 +813,7 @@ footer .links li {
   .projects-container {
     display: grid;
     margin: 80px auto 20px auto;
-    grid-template-rows: 750px auto 700px 700px;
+    grid-template-rows: 850px auto 890px 700px;
     grid-template-areas: "one" "two" "three" "four";
     width: 100vw;
   }
@@ -768,9 +863,11 @@ footer .links li {
   }
   .three div {
     height: 350px;
+    width: 50%;
   }
   .three button {
     margin-bottom: 20px;
+    margin-left: 50%;
   }
 
   .four {
@@ -854,6 +951,15 @@ footer .links li {
 
   #skills td {
     min-width: unset;
+  }
+}
+@media screen and (max-width: 768px) {
+  .projects-container {
+    display: grid;
+    margin: 80px auto 20px auto;
+    grid-template-rows: 750px auto 700px 700px;
+    grid-template-areas: "one" "two" "three" "four";
+    width: 100vw;
   }
 }
 
