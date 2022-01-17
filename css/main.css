@@ -437,13 +437,14 @@ header h1 {
 .two {
   transition: 0.5s;
   grid-area: two;
-  height: 500px;
+  height: 450px;
   width: 300px;
   left: 19vh;
   top: 100px;
   position: relative;
   border: 1px solid #707070;
   border: 1px solid #2d2d2d;
+  align-items: flex-end;
 }
 .two h2 {
   margin-left: 8px;
@@ -454,13 +455,14 @@ header h1 {
 .two p {
   font-size: 12px;
   text-align: start;
-  margin: 10px 50px 0 8px;
+  margin: 10px 10px 0 8px;
 }
 .two button {
-  bottom: 0;
-  right: 0;
+  bottom: 20px;
+  right: 5px;
   margin-left: 8px;
   transition: 0.5s !important;
+  position: absolute;
 }
 
 .two:hover {
@@ -552,8 +554,17 @@ header h1 {
 
 .text {
   grid-area: text;
+  border: 1px solid black;
   width: 570px;
   height: 400px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
+}
+
+.text-show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .ein {
@@ -598,14 +609,20 @@ header h1 {
   z-index: 2;
   top: 30px;
   right: 50px;
+  transition: 0.3s;
+}
+.alfa:hover {
+  width: 100%;
+  top: 0;
+  right: 0;
 }
 
 .zwei {
   grid-area: zwei;
   display: flex;
   height: 245px;
+  text-align: justify;
   left: -140px;
-  border: 1px solid black;
 }
 .zwei img {
   height: 100%;
@@ -923,6 +940,11 @@ footer .links li {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+  }
+  .alfa:hover {
+    width: 200px;
+    top: -50px;
+    right: 0;
   }
 
   .beta {
