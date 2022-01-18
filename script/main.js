@@ -28,6 +28,11 @@ function textAnimatoin() {
 window.addEventListener("scroll", function () {
     textAnimatoin();
 
-
-
 });
+
+
+
+
+
+
+
