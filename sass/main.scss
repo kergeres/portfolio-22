@@ -64,7 +64,7 @@ header {
 .projects-container {
   display: grid;
   margin: 80px auto 20px auto;
-  grid-template-rows: 750px 450px 500px;
+  grid-template-rows: 850px 500px 500px;
   grid-template-areas:
     "one two"
     "three three"
@@ -88,6 +88,19 @@ header {
   }
 }
 
+#projects {
+  background-image: url("/img/adam-bg-darkener.jpg");
+  // z-index: 5;
+
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 20px;
+  p {
+    color: white;
+  }
+}
 .one {
   grid-area: one;
   width: 400px;
@@ -124,10 +137,10 @@ header {
   height: 450px;
   width: 300px;
   left: 19vh;
-  top: 100px;
+  top: 190px;
   position: relative;
-  border: 1px solid $lightGray;
-  border: 1px solid $darkGray;
+  border: 1px solid #9c9c9c;
+
   align-items: flex-end;
 
   h2 {
@@ -212,6 +225,8 @@ header {
   p {
     @extend %project-descr;
     margin-right: 15px;
+    margin-left: 15px;
+    text-align: justify;
   }
   button {
     top: 40px;
@@ -241,7 +256,7 @@ header {
   font-size: 14px;
   margin-top: 70px;
   .about-me-container {
-    height: 950px;
+    height: 1100px;
     position: relative;
     width: 1000px;
 
@@ -260,10 +275,20 @@ header {
   transform: translateY(40px);
   transition: 1s;
 }
-.text-show {
-  opacity: 1;
-  transform: translateY(0);
+.zw {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
 }
+.text-show {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.text-showb {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
 .ein {
   grid-area: ein;
   margin-bottom: 0px;
@@ -293,6 +318,10 @@ header {
   position: absolute;
   top: 60px;
   right: 30px;
+  &:hover .alfa {
+    animation: alfa 0.8s forwards;
+    filter: grayscale(50%) !important;
+  }
 }
 .beta {
   width: 301px;
@@ -308,12 +337,16 @@ header {
   top: 30px;
   right: 50px;
   transition: 0.3s;
+  filter: grayscale(80%) !important;
   &:hover {
-    width: 100%;
-    top: 0;
-    right: 0;
+    // width: 100%;
+    // top: 0;
+    // right: 0;
+    animation: alfa 0.8s forwards;
+    filter: grayscale(50%) !important;
   }
 }
+
 .zwei {
   grid-area: zwei;
   display: flex;
@@ -337,6 +370,7 @@ header {
     background-image: url("/img/hobbi/upper/hobby\ "+#{$i}+".jpg");
     background-size: cover;
     background-position: center;
+    filter: grayscale(70%);
   }
 }
 @for $i from 1 through 7 {
@@ -344,6 +378,7 @@ header {
     background-image: url("/img/hobbi/lower/hobby\ "+#{$i}+".jpg");
     background-size: cover;
     background-position: center;
+    filter: grayscale(70%);
   }
 }
 
@@ -438,8 +473,9 @@ footer {
 }
 .ider {
   text-transform: lowercase;
-  margin-left: 5px;
+  padding-left: 5px;
 }
+
 @media screen and (max-width: 1080px) {
   header {
     h1 {
@@ -467,6 +503,9 @@ footer {
       height: 30px !important;
       width: 30px !important;
     }
+  }
+  .cv {
+    display: none;
   }
   .contact {
     margin-left: 30px !important;
@@ -517,9 +556,9 @@ footer {
 
   .three {
     flex-direction: column;
-    background-color: cyan;
+    background-color: #f2fff2;
     padding-top: 20px;
-    height: 450px;
+    height: 370px;
 
     img {
       width: 100vw;
@@ -529,11 +568,11 @@ footer {
     }
     div {
       height: 350px;
-      width: 50%;
+      width: 95%;
     }
     button {
-      margin-bottom: 20px;
-      margin-left: 50%;
+      margin-bottom: 5px;
+      margin-left: 75%;
     }
   }
   .four {
@@ -586,10 +625,12 @@ footer {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+
     &:hover {
       width: 200px;
       top: -50px;
       right: 0;
+      filter: grayscale(0%) !important;
     }
   }
   .beta {

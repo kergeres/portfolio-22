@@ -20,6 +20,7 @@ html {
   font-family: $primaryText;
   color: $lightGray;
   overflow-x: hidden;
+  cursor: url("img/bct.png") !important;
 }
 
 ::-webkit-scrollbar {

@@ -8,6 +8,34 @@ $animWhiteAnim-delay: 1s;
   opacity: 0;
   animation: animWhiteAnim 1s forwards $animWhiteAnim-delay;
 }
+
+.cv {
+  text-transform: uppercase;
+  margin-top: -20px;
+
+  padding-left: 50px;
+  position: absolute;
+  font-size: 60px;
+  color: #919191;
+  opacity: 0;
+  font-weight: lighter;
+  animation: menuAnimation 1s forwards $name-and-menu-delay;
+  transform-origin: 0% 50%;
+
+  &:after {
+    display: block;
+    content: "";
+    border-bottom: solid 3px black;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
+    transition-delay: 150ms;
+  }
+}
+
 .anim-white-border {
   height: 250px;
   border: 2px solid white;
@@ -35,6 +63,26 @@ $animWhiteAnim-delay: 1s;
     left: 50%;
     opacity: 1;
     width: 250px;
+  }
+}
+.beta {
+  filter: grayscale(40%);
+}
+@keyframes alfa {
+  0% {
+    width: 200px;
+    top: 30px;
+    right: 50px;
+  }
+  50% {
+    width: 200px;
+    top: 0px;
+    right: 0px;
+  }
+  100% {
+    width: 100%;
+    top: 0px;
+    right: 0px;
   }
 }
 .anim-white-border-in {
@@ -208,7 +256,14 @@ $animWhiteAnim-delay: 1s;
     width: 75px;
     height: 75px;
   }
-
+  @keyframes alfa {
+    0% {
+    }
+    50% {
+    }
+    100% {
+    }
+  }
   @keyframes animWhiteBgAnim {
     0% {
       left: -200%;
