@@ -16,7 +16,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0px;
 }
 
 /* Track */
@@ -381,7 +381,6 @@ nav ul {
   font-family: "Roboto", sans-serif;
   list-style: none;
   z-index: 100;
-  mix-blend-mode: difference;
 }
 nav li {
   color: #707070;
@@ -426,6 +425,18 @@ a:hover {
   position: absolute;
   top: 25vh;
   display: flex;
+}
+
+#circularcursor {
+  background-color: transparent;
+  border: 1px solid black;
+  height: 2px;
+  width: 2px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  position: absolute;
+  z-index: 1;
 }
 
 .four p, .three p, .one p {
@@ -479,6 +490,7 @@ a:hover {
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding-top: 20px;
+  background-color: #2d2d2d;
 }
 #projects p {
   color: white;

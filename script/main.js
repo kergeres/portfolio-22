@@ -53,15 +53,17 @@ window.addEventListener("scroll", function () {
 // };
 // crs()
 
-// $(document).ready(function () {
 
-//     $(document).on('mousemove', function (e) {
-//         $('#circularcursor').css({
-//             left: e.pageX,
-//             top: e.pageY
-//         }); $('#circularcursorBig').css({
-//             left: e.pageX - 15,
-//             top: e.pageY - 15
-//         });
-//     })
-// });
+
+$(document).ready(function () {
+
+    $(document).on('mousemove', function (e) {
+        $('#circularcursor').css({
+            left: e.pageX + 10,
+            top: e.pageY + 10
+
+        });
+
+    })
+
+});
