@@ -1,0 +1,42 @@
+nav {
+  ul {
+    animation: menuAnimation 1s forwards $name-and-menu-delay;
+    display: inline-block;
+    opacity: 0;
+    position: fixed;
+    right: 50px;
+    font-family: $secondaryText;
+    list-style: none;
+    z-index: 100;
+    mix-blend-mode: difference;
+  }
+
+  li {
+    // color: text($bg);
+    color: $lightGray;
+    // cursor: pointer;
+  }
+  :hover {
+    color: black;
+  }
+}
+
+header {
+  width: 100%;
+  background-color: white;
+  height: 100vh;
+  h1 {
+    font-family: "arial";
+    display: inline-block;
+    white-space: nowrap;
+    position: relative;
+    left: 40%;
+    transform: translate(-50%, 50%);
+    font-size: 5em;
+    color: $darkGray;
+    height: 90px;
+    top: -46px;
+    opacity: 0;
+    animation: nameAnimation 1s forwards $name-and-menu-delay;
+  }
+}

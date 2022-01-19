@@ -12,7 +12,7 @@ html {
   font-family: "Poppins", sans-serif;
   color: #707070;
   overflow-x: hidden;
-  cursor: url("img/bct.png") !important;
+  cursor: url("../img/Group 13.svg"), auto !important;
 }
 
 ::-webkit-scrollbar {
@@ -381,30 +381,13 @@ nav ul {
   font-family: "Roboto", sans-serif;
   list-style: none;
   z-index: 100;
+  mix-blend-mode: difference;
 }
 nav li {
   color: #707070;
-  cursor: pointer;
 }
 nav :hover {
   color: black;
-}
-
-a {
-  text-decoration: none;
-  color: unset;
-}
-
-a:hover {
-  color: black;
-}
-
-.name-container {
-  height: 160px;
-  width: 100%;
-  position: absolute;
-  top: 25vh;
-  display: flex;
 }
 
 header {
@@ -427,8 +410,44 @@ header h1 {
   animation: nameAnimation 1s forwards 5.3s;
 }
 
+a {
+  text-decoration: none;
+  color: unset;
+  cursor: url("../img/Group 13.svg"), auto !important;
+}
+
+a:hover {
+  color: black;
+}
+
+.name-container {
+  height: 160px;
+  width: 100%;
+  position: absolute;
+  top: 25vh;
+  display: flex;
+}
+
 .four p, .three p, .one p {
   font-size: 14px;
+}
+
+.project h2 {
+  color: white !important;
+}
+.project button {
+  color: white !important;
+}
+.project button:hover {
+  color: white !important;
+  opacity: 0.8;
+}
+.project a {
+  color: white !important;
+}
+.project a:hover {
+  color: white !important;
+  opacity: 0.5;
 }
 
 .projects-container {
@@ -447,7 +466,6 @@ header h1 {
   background: none;
   border: none;
   font-size: 14px;
-  cursor: pointer;
   height: 20px;
 }
 .projects-container button:hover {
@@ -464,6 +482,16 @@ header h1 {
 }
 #projects p {
   color: white;
+}
+#projects .project:hover img {
+  filter: grayscale(10%);
+}
+#projects img {
+  filter: grayscale(80%);
+  transition: 0.3s;
+}
+#projects img:hover {
+  filter: grayscale(10%);
 }
 
 .one {
@@ -707,105 +735,165 @@ header h1 {
   background-image: url("/img/hobbi/upper/hobby 1.jpg");
   background-size: cover;
   background-position: center;
+  transition: 0.3s;
   filter: grayscale(70%);
+}
+.upper-container div:nth-child(1):hover {
+  filter: grayscale(0%);
 }
 
 .upper-container div:nth-child(2) {
   background-image: url("/img/hobbi/upper/hobby 2.jpg");
   background-size: cover;
   background-position: center;
+  transition: 0.3s;
   filter: grayscale(70%);
+}
+.upper-container div:nth-child(2):hover {
+  filter: grayscale(0%);
 }
 
 .upper-container div:nth-child(3) {
   background-image: url("/img/hobbi/upper/hobby 3.jpg");
   background-size: cover;
   background-position: center;
+  transition: 0.3s;
   filter: grayscale(70%);
+}
+.upper-container div:nth-child(3):hover {
+  filter: grayscale(0%);
 }
 
 .upper-container div:nth-child(4) {
   background-image: url("/img/hobbi/upper/hobby 4.jpg");
   background-size: cover;
   background-position: center;
+  transition: 0.3s;
   filter: grayscale(70%);
+}
+.upper-container div:nth-child(4):hover {
+  filter: grayscale(0%);
 }
 
 .upper-container div:nth-child(5) {
   background-image: url("/img/hobbi/upper/hobby 5.jpg");
   background-size: cover;
   background-position: center;
+  transition: 0.3s;
   filter: grayscale(70%);
+}
+.upper-container div:nth-child(5):hover {
+  filter: grayscale(0%);
 }
 
 .upper-container div:nth-child(6) {
   background-image: url("/img/hobbi/upper/hobby 6.jpg");
   background-size: cover;
   background-position: center;
+  transition: 0.3s;
   filter: grayscale(70%);
+}
+.upper-container div:nth-child(6):hover {
+  filter: grayscale(0%);
 }
 
 .upper-container div:nth-child(7) {
   background-image: url("/img/hobbi/upper/hobby 7.jpg");
   background-size: cover;
   background-position: center;
+  transition: 0.3s;
   filter: grayscale(70%);
+}
+.upper-container div:nth-child(7):hover {
+  filter: grayscale(0%);
 }
 
 .upper-container div:nth-child(8) {
   background-image: url("/img/hobbi/upper/hobby 8.jpg");
   background-size: cover;
   background-position: center;
+  transition: 0.3s;
   filter: grayscale(70%);
+}
+.upper-container div:nth-child(8):hover {
+  filter: grayscale(0%);
 }
 
 .lower-container div:nth-child(1) {
   background-image: url("/img/hobbi/lower/hobby 1.jpg");
   background-size: cover;
   background-position: center;
+  transition: 0.3s;
   filter: grayscale(70%);
+}
+.lower-container div:nth-child(1):hover {
+  filter: grayscale(0%);
 }
 
 .lower-container div:nth-child(2) {
   background-image: url("/img/hobbi/lower/hobby 2.jpg");
   background-size: cover;
   background-position: center;
+  transition: 0.3s;
   filter: grayscale(70%);
+}
+.lower-container div:nth-child(2):hover {
+  filter: grayscale(0%);
 }
 
 .lower-container div:nth-child(3) {
   background-image: url("/img/hobbi/lower/hobby 3.jpg");
   background-size: cover;
   background-position: center;
+  transition: 0.3s;
   filter: grayscale(70%);
+}
+.lower-container div:nth-child(3):hover {
+  filter: grayscale(0%);
 }
 
 .lower-container div:nth-child(4) {
   background-image: url("/img/hobbi/lower/hobby 4.jpg");
   background-size: cover;
   background-position: center;
+  transition: 0.3s;
   filter: grayscale(70%);
+}
+.lower-container div:nth-child(4):hover {
+  filter: grayscale(0%);
 }
 
 .lower-container div:nth-child(5) {
   background-image: url("/img/hobbi/lower/hobby 5.jpg");
   background-size: cover;
   background-position: center;
+  transition: 0.3s;
   filter: grayscale(70%);
+}
+.lower-container div:nth-child(5):hover {
+  filter: grayscale(0%);
 }
 
 .lower-container div:nth-child(6) {
   background-image: url("/img/hobbi/lower/hobby 6.jpg");
   background-size: cover;
   background-position: center;
+  transition: 0.3s;
   filter: grayscale(70%);
+}
+.lower-container div:nth-child(6):hover {
+  filter: grayscale(0%);
 }
 
 .lower-container div:nth-child(7) {
   background-image: url("/img/hobbi/lower/hobby 7.jpg");
   background-size: cover;
   background-position: center;
+  transition: 0.3s;
   filter: grayscale(70%);
+}
+.lower-container div:nth-child(7):hover {
+  filter: grayscale(0%);
 }
 
 #graphs {
@@ -815,6 +903,7 @@ header h1 {
   display: flex;
   flex-direction: column;
   margin-bottom: 65px;
+  background-color: #d9d9d9;
 }
 #graphs .upper-container {
   display: flex;
@@ -824,7 +913,6 @@ header h1 {
   height: 70px;
   background-color: rebeccapurple;
   margin: 15px;
-  cursor: pointer;
 }
 #graphs .lower-container {
   display: flex;
@@ -835,7 +923,6 @@ header h1 {
   height: 70px;
   background-color: #393c4b;
   margin: 15px;
-  cursor: pointer;
 }
 
 #skills {

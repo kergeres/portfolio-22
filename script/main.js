@@ -23,7 +23,7 @@ function textAnimatoin() {
         top.classList.add("text-show");
     }
     if (introPositionForB < screenPosition) {
-        bottom.classList.add("text-showb"); console.log("dddddddd");
+        bottom.classList.add("text-showb");
     }
 
 
@@ -42,3 +42,26 @@ window.addEventListener("scroll", function () {
 
 
 
+// function crs() {
+//     document.querySelector("body").addEventListener('mousemove', function (e) {
+
+//         document.querySelector('#circularcursor').style.left = `${e.screenX}px`;
+
+//         document.querySelector('#circularcursor').style.top = `${e.screenY}px`;
+
+//     })
+// };
+// crs()
+
+// $(document).ready(function () {
+
+//     $(document).on('mousemove', function (e) {
+//         $('#circularcursor').css({
+//             left: e.pageX,
+//             top: e.pageY
+//         }); $('#circularcursorBig').css({
+//             left: e.pageX - 15,
+//             top: e.pageY - 15
+//         });
+//     })
+// });

@@ -1,30 +1,11 @@
 @import "_vars";
 @import "keyframes";
+@import "header";
 
-nav {
-  ul {
-    animation: menuAnimation 1s forwards $name-and-menu-delay;
-    display: inline-block;
-    opacity: 0;
-    position: fixed;
-    right: 50px;
-    font-family: $secondaryText;
-    list-style: none;
-    z-index: 100;
-  }
-
-  li {
-    // color: text($bg);
-    color: $lightGray;
-    cursor: pointer;
-  }
-  :hover {
-    color: black;
-  }
-}
 a {
   text-decoration: none;
   color: unset;
+  cursor: url("../img/Group 13.svg"), auto !important;
 }
 a:hover {
   color: black;
@@ -37,30 +18,28 @@ a:hover {
   display: flex;
 }
 
-header {
-  width: 100%;
-  background-color: white;
-  height: 100vh;
-  h1 {
-    font-family: "arial";
-    display: inline-block;
-    white-space: nowrap;
-    position: relative;
-    left: 40%;
-    transform: translate(-50%, 50%);
-    font-size: 5em;
-    color: $darkGray;
-    height: 90px;
-    top: -46px;
-    opacity: 0;
-    animation: nameAnimation 1s forwards $name-and-menu-delay;
-  }
-}
-
 %project-descr {
   font-size: 14px;
 }
-
+.project {
+  h2 {
+    color: white !important;
+  }
+  button {
+    color: white !important;
+    &:hover {
+      color: white !important;
+      opacity: 0.8;
+    }
+  }
+  a {
+    color: white !important;
+    &:hover {
+      color: white !important;
+      opacity: 0.5;
+    }
+  }
+}
 .projects-container {
   display: grid;
   margin: 80px auto 20px auto;
@@ -80,7 +59,7 @@ header {
     background: none;
     border: none;
     font-size: 14px;
-    cursor: pointer;
+    // cursor: pointer;
     height: 20px;
   }
   button:hover {
@@ -90,8 +69,6 @@ header {
 
 #projects {
   background-image: url("/img/adam-bg-darkener.jpg");
-  // z-index: 5;
-
   background-size: 100%;
   background-position: top;
   background-repeat: no-repeat;
@@ -99,6 +76,18 @@ header {
   padding-top: 20px;
   p {
     color: white;
+  }
+  .project {
+    &:hover img {
+      filter: grayscale(10%);
+    }
+  }
+  img {
+    filter: grayscale(80%);
+    transition: 0.3s;
+    &:hover {
+      filter: grayscale(10%);
+    }
   }
 }
 .one {
@@ -219,8 +208,6 @@ header {
   width: 1000px;
 
   color: $lightGray;
-  // right: 0;
-
   transition: 0.5s;
   p {
     @extend %project-descr;
@@ -370,7 +357,11 @@ header {
     background-image: url("/img/hobbi/upper/hobby\ "+#{$i}+".jpg");
     background-size: cover;
     background-position: center;
+    transition: 0.3s;
     filter: grayscale(70%);
+    &:hover {
+      filter: grayscale(0%);
+    }
   }
 }
 @for $i from 1 through 7 {
@@ -378,7 +369,11 @@ header {
     background-image: url("/img/hobbi/lower/hobby\ "+#{$i}+".jpg");
     background-size: cover;
     background-position: center;
+    transition: 0.3s;
     filter: grayscale(70%);
+    &:hover {
+      filter: grayscale(0%);
+    }
   }
 }
 
@@ -389,6 +384,7 @@ header {
   display: flex;
   flex-direction: column;
   margin-bottom: 65px;
+  background-color: #d9d9d9;
   .upper-container {
     display: flex;
 
@@ -397,7 +393,7 @@ header {
       height: 70px;
       background-color: rebeccapurple;
       margin: 15px;
-      cursor: pointer;
+      // cursor: pointer;
     }
   }
   .lower-container {
@@ -409,7 +405,7 @@ header {
       height: 70px;
       background-color: rgb(57, 60, 75);
       margin: 15px;
-      cursor: pointer;
+      // cursor: pointer;
     }
   }
 }
