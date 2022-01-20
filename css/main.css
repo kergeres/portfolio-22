@@ -461,6 +461,110 @@ nav :hover {
   color: black;
 }
 
+.scrolldwn-container {
+  width: 10px;
+  height: 150px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+@keyframes igen {
+  0% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  40% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  50% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  55% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  99% {
+    border-width: 1px;
+    border-style: solid;
+  }
+  100% {
+    border-width: 0px;
+    border-style: solid;
+  }
+}
+@keyframes nem {
+  0% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  40% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  50% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  55% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  99% {
+    border-width: 1px;
+    border-style: solid;
+  }
+  100% {
+    border-width: 0px;
+    border-style: solid;
+  }
+}
+.scrolldwn-container div {
+  width: 90%;
+  height: 25%;
+  margin-top: 2px;
+  position: relative;
+}
+.scrolldwn-container div:nth-child(1) {
+  width: 90%;
+  height: 25%;
+  margin-top: 2px;
+  position: relative;
+  animation: igen 0.7s forwards 8s, nem 0.7s forwards 9s;
+  border-color: #a5a5a5;
+}
+.scrolldwn-container div:nth-child(2) {
+  width: 90%;
+  height: 25%;
+  margin-top: 2px;
+  position: relative;
+  border-color: #7b7b7b;
+  animation: igen 0.7s forwards 8.1s, nem 0.7s forwards 9.1s;
+}
+.scrolldwn-container div:nth-child(3) {
+  width: 90%;
+  height: 25%;
+  margin-top: 2px;
+  position: relative;
+  border-color: #545454;
+  animation: igen 0.7s forwards 8.2s, nem 0.7s forwards 9.2s;
+}
+.scrolldwn-container div:nth-child(4) {
+  width: 90%;
+  height: 25%;
+  margin-top: 2px;
+  position: relative;
+  border-color: #2f2f2f;
+  animation: igen 0.7s forwards 8.3s, nem 0.7s forwards 9.3s;
+}
+
 header {
   width: 100%;
   background-color: white;
@@ -1248,6 +1352,10 @@ footer .links li {
 
   #skills td {
     min-width: unset;
+  }
+
+  footer {
+    border-bottom: 50px solid #2d2d2d;
   }
 }
 @media screen and (max-width: 768px) {

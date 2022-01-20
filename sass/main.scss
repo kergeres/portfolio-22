@@ -676,6 +676,10 @@ footer {
       min-width: unset;
     }
   }
+
+  footer {
+    border-bottom: 50px solid $darkGray;
+  }
 }
 
 @media screen and (max-width: 768px) {

@@ -39,22 +39,6 @@ window.addEventListener("scroll", function () {
 
 
 
-
-
-
-// function crs() {
-//     document.querySelector("body").addEventListener('mousemove', function (e) {
-
-//         document.querySelector('#circularcursor').style.left = `${e.screenX}px`;
-
-//         document.querySelector('#circularcursor').style.top = `${e.screenY}px`;
-
-//     })
-// };
-// crs()
-
-
-
 $(document).ready(function () {
 
     $(document).on('mousemove', function (e) {
@@ -67,3 +51,42 @@ $(document).ready(function () {
     })
 
 });
+
+let scrollanim = () => {
+
+    let blocks = document.querySelectorAll('.scrolldwn-container div')
+
+
+    var i = 0;                  //  set your counter to 1
+
+    function myLoop() {
+        //  create a loop function
+        setTimeout(function () {
+
+            if (i == 0) {
+                blocks[i].style.border = `1px solid green`
+            }
+            if (i == 1) {
+                blocks[i].style.border = `1px solid blue`
+            }
+            if (i == 2) {
+                blocks[i].style.border = `1px solid red`
+            }
+            if (i == 3) {
+                blocks[i].style.border = `1px solid black`
+            }
+
+            i++;                    //  increment the counter
+            if (i < 4) {           //  if the counter < 10, call the loop function
+                myLoop();             //  ..  again which will trigger another 
+            }
+        }, 100)
+    }
+
+    myLoop();
+
+
+}
+// scrollanim()
+
+// let blocks = document.querySelector('.scrolldwn-container div').style.opacity = '0.1'
