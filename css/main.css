@@ -1003,6 +1003,10 @@ footer .links li {
     white-space: nowrap;
   }
 
+  #circularcursor {
+    display: none;
+  }
+
   main {
     height: auto;
     width: 100vw;
@@ -1036,7 +1040,7 @@ footer .links li {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     grid-template-areas: "one" "two" "three" "four";
-    width: 100vw;
+    width: 103vw;
   }
 
   .one,
@@ -1052,11 +1056,6 @@ footer .links li {
   .one img {
     width: 90%;
   }
-  .one button {
-    position: absolute;
-    right: 20px;
-  }
-
   .two {
     margin: 0 auto 80px auto;
     min-height: 550px;
@@ -1078,8 +1077,12 @@ footer .links li {
   .three img {
     width: 100vw;
   }
+  .three h2 {
+    color: black !important;
+  }
   .three p {
     margin-bottom: 10px;
+    color: black !important;
   }
   .three div {
     height: 350px;
@@ -1088,6 +1091,7 @@ footer .links li {
   .three button {
     margin-bottom: 5px;
     margin-left: 75%;
+    color: black !important;
   }
 
   .four {
@@ -1101,10 +1105,13 @@ footer .links li {
     height: auto;
   }
   .four button {
+    top: -28px;
     right: 0;
-    top: -25px;
+  }
+  .four a {
+    display: block;
+    width: 90%;
     text-align: end;
-    padding-right: 20px;
   }
 
   .about-me-container {
@@ -1185,7 +1192,7 @@ footer .links li {
     margin: 80px auto 20px auto;
     grid-template-rows: 750px auto 700px 700px;
     grid-template-areas: "one" "two" "three" "four";
-    width: 100vw;
+    width: 103vw;
   }
 
   footer {
