@@ -278,6 +278,14 @@ html {
     opacity: 1;
   }
 }
+.name-container {
+  height: 160px;
+  width: 100%;
+  position: absolute;
+  top: 25vh;
+  display: flex;
+}
+
 @media screen and (max-width: 1080px) {
   .anim-white-border {
     width: 100px;
@@ -290,20 +298,30 @@ html {
   }
 
   @keyframes alfa {}
+  @keyframes spinClockOut {
+    0% {
+      transform: translate(-50%, -150%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -150%) rotate(90deg);
+    }
+  }
   @keyframes animWhiteBgAnim {
     0% {
       left: -200%;
       opacity: 1;
       width: 100px;
+      transform: translate(-50%, -150%);
     }
     85% {
       width: 100px;
+      transform: translate(-50%, -150%);
     }
     100% {
       left: 50%;
       opacity: 1;
       width: 100px;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -150%);
     }
   }
   @keyframes animWhiteBgAnimIn {
@@ -322,35 +340,87 @@ html {
       height: 75px;
     }
   }
+  .name-container {
+    justify-content: center;
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    top: 25vh;
+  }
+
   @keyframes eMP {
     0% {
       opacity: 0;
     }
-    25% {
+    10% {
       opacity: 0;
     }
-    75% {
+    20% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    90% {
       opacity: 1;
     }
     100% {
       opacity: 0;
     }
   }
-  .name-container {
-    justify-content: center;
-    display: flex;
-  }
-
   @keyframes fD {
     0% {
       opacity: 0;
       left: -50%;
     }
-    25% {
+    10% {
       opacity: 1;
       left: -50%;
     }
-    75% {
+    20% {
+      opacity: 1;
+      left: -50%;
+    }
+    30% {
+      opacity: 1;
+      left: -50%;
+    }
+    40% {
+      opacity: 0;
+      left: -50%;
+    }
+    50% {
+      opacity: 0;
+      left: -50%;
+    }
+    60% {
+      opacity: 0;
+      left: -50%;
+    }
+    70% {
+      opacity: 0;
+      left: -50%;
+    }
+    80% {
+      opacity: 0;
+      left: -50%;
+    }
+    90% {
       opacity: 0;
       left: -50%;
     }
@@ -360,16 +430,18 @@ html {
     }
   }
   .f-d {
-    animation: fD 9s infinite 4.8s;
+    animation: fD 9s infinite 5.5s;
     height: 40px;
     transform: translateX(-37%);
+    top: 7vh;
     width: 100vw !important;
   }
 
   .e-m-p {
-    animation: eMP 9s infinite 8.3;
+    animation: eMP 9s infinite 5.5s;
     transform: translateX(9%);
     width: 100vw !important;
+    top: 7vh;
   }
 }
 nav ul {
@@ -419,17 +491,9 @@ a:hover {
   color: black;
 }
 
-.name-container {
-  height: 160px;
-  width: 100%;
-  position: absolute;
-  top: 25vh;
-  display: flex;
-}
-
 #circularcursor {
   background-color: transparent;
-  border: 1px solid black;
+  border: 1px solid #707070;
   height: 2px;
   width: 2px;
   border-radius: 50%;

@@ -10,16 +10,10 @@ a {
 a:hover {
   color: black;
 }
-.name-container {
-  height: 160px;
-  width: 100%;
-  position: absolute;
-  top: 25vh;
-  display: flex;
-}
+
 #circularcursor {
   background-color: transparent;
-  border: 1px solid black;
+  border: 1px solid $lightGray;
   height: 2px;
   width: 2px;
   border-radius: 50%;
