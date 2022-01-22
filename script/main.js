@@ -1,18 +1,21 @@
 "use strict";
 
-
+// google analytics 
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 
 gtag('config', 'G-2E86DF0HZ1');
 
+// my hobby img links 
 document.querySelectorAll('.upper-container div, .lower-container div').forEach(pic => {
     pic.addEventListener('click', (e) => {
         window.open("https://photos.app.goo.gl/RTEVkvdS5fLeFDD37")
     })
 })
 
+
+// about me text p animation  
 function textAnimatoin() {
 
     let top = document.querySelector(".text"); let bottom = document.querySelector(".zw");
@@ -30,7 +33,7 @@ function textAnimatoin() {
 }
 
 
-
+// about me text p animation call 
 window.addEventListener("scroll", function () {
     textAnimatoin();
 
@@ -52,41 +55,3 @@ $(document).ready(function () {
 
 });
 
-let scrollanim = () => {
-
-    let blocks = document.querySelectorAll('.scrolldwn-container div')
-
-
-    var i = 0;                  //  set your counter to 1
-
-    function myLoop() {
-        //  create a loop function
-        setTimeout(function () {
-
-            if (i == 0) {
-                blocks[i].style.border = `1px solid green`
-            }
-            if (i == 1) {
-                blocks[i].style.border = `1px solid blue`
-            }
-            if (i == 2) {
-                blocks[i].style.border = `1px solid red`
-            }
-            if (i == 3) {
-                blocks[i].style.border = `1px solid black`
-            }
-
-            i++;                    //  increment the counter
-            if (i < 4) {           //  if the counter < 10, call the loop function
-                myLoop();             //  ..  again which will trigger another 
-            }
-        }, 100)
-    }
-
-    myLoop();
-
-
-}
-// scrollanim()
-
-// let blocks = document.querySelector('.scrolldwn-container div').style.opacity = '0.1'

@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(../fonts/poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/roboto/Roboto-Regular.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -5,14 +13,6 @@
 
 *:focus {
   outline: 0 !important;
-}
-
-html {
-  scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
-  color: #707070;
-  overflow-x: hidden;
-  cursor: url("../img/Group 13.svg"), auto !important;
 }
 
 ::-webkit-scrollbar {
@@ -52,6 +52,7 @@ html {
 .cv {
   text-transform: uppercase;
   margin-top: -20px;
+  transition: 1s;
   padding-left: 50px;
   position: absolute;
   font-size: 60px;
@@ -444,6 +445,58 @@ html {
     top: 7vh;
   }
 }
+@keyframes scrollAnFirst {
+  0% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  40% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  50% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  55% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  99% {
+    border-width: 1px;
+    border-style: solid;
+  }
+  100% {
+    border-width: 0px;
+    border-style: solid;
+  }
+}
+@keyframes scrollAnSec {
+  0% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  40% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  50% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  55% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  99% {
+    border-width: 1px;
+    border-style: solid;
+  }
+  100% {
+    border-width: 0px;
+    border-style: solid;
+  }
+}
 nav ul {
   animation: menuAnimation 1s forwards 5.3s;
   display: inline-block;
@@ -458,7 +511,8 @@ nav li {
   color: #707070;
 }
 nav :hover {
-  color: black;
+  opacity: 0.8;
+  color: #707070 !important;
 }
 
 .scrolldwn-container {
@@ -474,58 +528,6 @@ nav :hover {
   flex-direction: column;
   align-items: center;
 }
-@keyframes igen {
-  0% {
-    border-width: 0px;
-    border-style: solid;
-  }
-  40% {
-    border-width: 0px;
-    border-style: solid;
-  }
-  50% {
-    border-width: 0px;
-    border-style: solid;
-  }
-  55% {
-    border-width: 0px;
-    border-style: solid;
-  }
-  99% {
-    border-width: 1px;
-    border-style: solid;
-  }
-  100% {
-    border-width: 0px;
-    border-style: solid;
-  }
-}
-@keyframes nem {
-  0% {
-    border-width: 0px;
-    border-style: solid;
-  }
-  40% {
-    border-width: 0px;
-    border-style: solid;
-  }
-  50% {
-    border-width: 0px;
-    border-style: solid;
-  }
-  55% {
-    border-width: 0px;
-    border-style: solid;
-  }
-  99% {
-    border-width: 1px;
-    border-style: solid;
-  }
-  100% {
-    border-width: 0px;
-    border-style: solid;
-  }
-}
 .scrolldwn-container div {
   width: 90%;
   height: 25%;
@@ -537,7 +539,7 @@ nav :hover {
   height: 25%;
   margin-top: 2px;
   position: relative;
-  animation: igen 0.7s forwards 8s, nem 0.7s forwards 9s;
+  animation: scrollAnFirst 0.7s forwards 8s, scrollAnSec 0.7s forwards 9s;
   border-color: #a5a5a5;
 }
 .scrolldwn-container div:nth-child(2) {
@@ -546,7 +548,7 @@ nav :hover {
   margin-top: 2px;
   position: relative;
   border-color: #7b7b7b;
-  animation: igen 0.7s forwards 8.1s, nem 0.7s forwards 9.1s;
+  animation: scrollAnFirst 0.7s forwards 8.1s, scrollAnSec 0.7s forwards 9.1s;
 }
 .scrolldwn-container div:nth-child(3) {
   width: 90%;
@@ -554,7 +556,7 @@ nav :hover {
   margin-top: 2px;
   position: relative;
   border-color: #545454;
-  animation: igen 0.7s forwards 8.2s, nem 0.7s forwards 9.2s;
+  animation: scrollAnFirst 0.7s forwards 8.2s, scrollAnSec 0.7s forwards 9.2s;
 }
 .scrolldwn-container div:nth-child(4) {
   width: 90%;
@@ -562,7 +564,7 @@ nav :hover {
   margin-top: 2px;
   position: relative;
   border-color: #2f2f2f;
-  animation: igen 0.7s forwards 8.3s, nem 0.7s forwards 9.3s;
+  animation: scrollAnFirst 0.7s forwards 8.3s, scrollAnSec 0.7s forwards 9.3s;
 }
 
 header {
@@ -593,6 +595,14 @@ a {
 
 a:hover {
   color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  color: #707070;
+  overflow-x: hidden;
+  cursor: url("../img/Group 13.svg"), auto !important;
 }
 
 #circularcursor {
@@ -898,7 +908,7 @@ a:hover {
 .zwei {
   grid-area: zwei;
   display: flex;
-  height: 245px;
+  height: 400px;
   text-align: justify;
   left: -140px;
 }
@@ -1335,9 +1345,9 @@ footer .links li {
     height: auto;
   }
   .zwei p {
-    width: 100vw;
+    width: 93%;
     margin-left: 0;
-    padding: 5px;
+    padding: 8px;
   }
   .zwei img {
     height: auto;
@@ -1346,8 +1356,9 @@ footer .links li {
 
   .text {
     width: 100vw;
-    font-size: 12px;
+    font-size: 14px;
     padding: 5px;
+    height: auto;
   }
 
   #skills td {

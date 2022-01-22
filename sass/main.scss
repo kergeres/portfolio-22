@@ -10,7 +10,13 @@ a {
 a:hover {
   color: black;
 }
-
+html {
+  scroll-behavior: smooth;
+  font-family: $primaryText;
+  color: $lightGray;
+  overflow-x: hidden;
+  cursor: url("../img/Group 13.svg"), auto !important;
+}
 #circularcursor {
   background-color: transparent;
   border: 1px solid $lightGray;
@@ -343,7 +349,7 @@ a:hover {
 .zwei {
   grid-area: zwei;
   display: flex;
-  height: 245px;
+  height: 400px;
 
   text-align: justify;
   left: -140px;
@@ -656,9 +662,9 @@ footer {
     display: block;
     height: auto;
     p {
-      width: 100vw;
+      width: 93%;
       margin-left: 0;
-      padding: 5px;
+      padding: 8px;
     }
     img {
       height: auto;
@@ -667,9 +673,9 @@ footer {
   }
   .text {
     width: 100vw;
-    font-size: 12px;
-
+    font-size: 14px;
     padding: 5px;
+    height: auto;
   }
   #skills {
     td {

@@ -12,7 +12,7 @@ $animWhiteAnim-delay: 1s;
 .cv {
   text-transform: uppercase;
   margin-top: -20px;
-
+  transition: 1s;
   padding-left: 50px;
   position: absolute;
   font-size: 60px;
@@ -424,5 +424,60 @@ $animWhiteAnim-delay: 1s;
     transform: translateX(9%);
     width: 100vw !important;
     top: 7vh;
+  }
+}
+
+@keyframes scrollAnFirst {
+  0% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  40% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  50% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  55% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  99% {
+    border-width: 1px;
+    border-style: solid;
+    // opacity: 1;
+  }
+  100% {
+    border-width: 0px;
+    border-style: solid;
+    // opacity: 1;
+  }
+}
+@keyframes scrollAnSec {
+  0% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  40% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  50% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  55% {
+    border-width: 0px;
+    border-style: solid;
+  }
+  99% {
+    border-width: 1px;
+    border-style: solid;
+  }
+  100% {
+    border-width: 0px;
+    border-style: solid;
   }
 }

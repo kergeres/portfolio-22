@@ -16,7 +16,8 @@ nav {
     // cursor: pointer;
   }
   :hover {
-    color: black;
+    opacity: 0.8;
+    color: $lightGray !important;
   }
 }
 
@@ -33,61 +34,6 @@ nav {
   flex-direction: column;
   align-items: center;
 
-  @keyframes igen {
-    0% {
-      border-width: 0px;
-      border-style: solid;
-    }
-    40% {
-      border-width: 0px;
-      border-style: solid;
-    }
-    50% {
-      border-width: 0px;
-      border-style: solid;
-    }
-    55% {
-      border-width: 0px;
-      border-style: solid;
-    }
-    99% {
-      border-width: 1px;
-      border-style: solid;
-      // opacity: 1;
-    }
-    100% {
-      border-width: 0px;
-      border-style: solid;
-      // opacity: 1;
-    }
-  }
-  @keyframes nem {
-    0% {
-      border-width: 0px;
-      border-style: solid;
-    }
-    40% {
-      border-width: 0px;
-      border-style: solid;
-    }
-    50% {
-      border-width: 0px;
-      border-style: solid;
-    }
-    55% {
-      border-width: 0px;
-      border-style: solid;
-    }
-    99% {
-      border-width: 1px;
-      border-style: solid;
-    }
-    100% {
-      border-width: 0px;
-      border-style: solid;
-    }
-  }
-
   div {
     width: 90%;
     height: 25%;
@@ -99,7 +45,7 @@ nav {
     height: 25%;
     margin-top: 2px;
     position: relative;
-    animation: igen 0.7s forwards 8s, nem 0.7s forwards 9s;
+    animation: scrollAnFirst 0.7s forwards 8s, scrollAnSec 0.7s forwards 9s;
     border-color: #a5a5a5;
   }
   div:nth-child(2) {
@@ -108,7 +54,7 @@ nav {
     margin-top: 2px;
     position: relative;
     border-color: #7b7b7b;
-    animation: igen 0.7s forwards 8.1s, nem 0.7s forwards 9.1s;
+    animation: scrollAnFirst 0.7s forwards 8.1s, scrollAnSec 0.7s forwards 9.1s;
   }
   div:nth-child(3) {
     width: 90%;
@@ -116,7 +62,7 @@ nav {
     margin-top: 2px;
     position: relative;
     border-color: #545454;
-    animation: igen 0.7s forwards 8.2s, nem 0.7s forwards 9.2s;
+    animation: scrollAnFirst 0.7s forwards 8.2s, scrollAnSec 0.7s forwards 9.2s;
   }
   div:nth-child(4) {
     width: 90%;
@@ -124,7 +70,7 @@ nav {
     margin-top: 2px;
     position: relative;
     border-color: #2f2f2f;
-    animation: igen 0.7s forwards 8.3s, nem 0.7s forwards 9.3s;
+    animation: scrollAnFirst 0.7s forwards 8.3s, scrollAnSec 0.7s forwards 9.3s;
   }
 }
 
