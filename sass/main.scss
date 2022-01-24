@@ -361,6 +361,7 @@ html {
   p {
     width: 300px;
     margin-left: 15px;
+    margin-top: -5px;
   }
 }
 
@@ -429,25 +430,26 @@ html {
   .content-container {
     width: auto;
     height: auto;
-
     display: flex;
     justify-content: center;
   }
   table {
+    margin-left: 100px;
     margin-top: 80px;
     margin-bottom: 200px;
     width: 70vw;
   }
 
   tr :nth-child(2) {
-    padding-left: 15vw;
+    padding-left: 10vw;
   }
   td {
-    font-size: 4vw;
+    font-size: 3vw;
     min-width: 340px;
     margin: 10px;
     line-height: 100px;
     height: auto;
+    // border: $border;
   }
 }
 
@@ -493,6 +495,7 @@ footer {
       white-space: nowrap;
     }
   }
+
   #circularcursor {
     display: none;
   }
@@ -534,7 +537,7 @@ footer {
       "four";
     width: 103vw;
   }
-  .one,
+
   .three,
   .four {
     width: 100vw;
@@ -543,14 +546,16 @@ footer {
   .one {
     padding-left: 8px;
     height: auto;
+
+    width: 97vw;
     img {
-      width: 90%;
+      width: 98%;
     }
-    button {
-      // position: relative;
-      // margin-left: auto;
-      // margin-right: 3px;
-    }
+    // button {
+    //   // position: relative;
+    //   // margin-left: auto;
+    //   // margin-right: 3px;
+    // }
   }
 
   .two {
@@ -678,8 +683,26 @@ footer {
     height: auto;
   }
   #skills {
+    table {
+      margin-left: 0px;
+      width: 80vw;
+    }
+    td:first-child {
+      min-width: 100px;
+    }
+    td:nth-child(2) {
+      width: 100px;
+    }
     td {
       min-width: unset;
+      font-size: 4vw;
+      // border: $border;
+      text-align: start;
+      vertical-align: middle;
+      align-self: center;
+      align-content: center;
+      line-height: 18px;
+      height: 65px;
     }
   }
 

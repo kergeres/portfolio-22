@@ -21,6 +21,9 @@ $animWhiteAnim-delay: 1s;
   font-weight: lighter;
   animation: menuAnimation 1s forwards $name-and-menu-delay;
   transform-origin: 0% 50%;
+  &:hover {
+    color: black;
+  }
 
   &:after {
     display: block;
